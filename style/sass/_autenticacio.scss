@@ -1,0 +1,37 @@
+@import '_colors';
+
+body{
+    background-image: linear-gradient(to top, $color_principal 0%, $white 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.auth{
+    margin-top: 250px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $white_opacitat_baixa;
+    border-radius: 2px;
+    color: $white;
+    h1{
+        text-align: center;
+    }
+}
+
+#bEntrar{
+    background-color: $color_principal;
+    border-color: $color_principal;
+    color: $white;
+}
+
+#bCanvi{
+    background-color: $color_principal;
+    border-color: $color_principal;
+    color: $white;
+}
+
+#bEntrar:hover{
+    background-color: $color_p_hover;
+    border-color: $color_p_hover;
+}
+
