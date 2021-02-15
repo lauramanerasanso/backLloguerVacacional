@@ -247,7 +247,8 @@ include('header.php');
     };
 
 
-    xhttp.open("GET", "http://api.mallorcarustic.me/reserves/grafic-pie", true);
+    xhttp.open("POST", "http://api.mallorcarustic.me/reserves/grafic-pie", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send();
 
     window.cache = {
@@ -260,7 +261,7 @@ include('header.php');
         url: 'http://api.mallorcarustic.me/reserves/grafic-bar',
         method: 'POST',
         data: {},
-        async: true,
+        async: false,
         success: function (data) {
             var reserves = JSON.parse(data);
 
@@ -272,7 +273,7 @@ include('header.php');
             if (window.cache.reserves.length < 12) {
                 for (var i = window.cache.reserves.length; i < 12; i++) {
                     window.cache.reserves.push(0);
-                    console.log(window.cache.reserves);
+                    //console.log(window.cache.reserves);
                 }
             }
         }
