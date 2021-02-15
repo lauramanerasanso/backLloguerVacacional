@@ -73,10 +73,10 @@ include('header.php');
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-md-4">
+            <div class="col-lg-4 col-md-4">
                 <input type="text" name="nom" id="nomCasa" class="form-control" placeholder="Tria una casa">
             </div>
-            <div class="col-lg-3 col-md-4">
+            <div class="col-lg-2 col-md-4">
                 <select class="custom-select mr-sm-2" id="mes">
                     <option value="0" selected>Tria un mes</option>
                     <option value="1"> Gener</option>
@@ -93,10 +93,10 @@ include('header.php');
                     <option value="12"> Desembre</option>
                 </select>
             </div>
-            <div class="col-lg-3 col-md-4">
+            <div class="col-lg-2 col-md-4">
                 <input type="text" name="any" id="any" class="form-control" placeholder="Tria un any">
             </div>
-            <div class="col-lg-1 col-md-2">
+            <div class="col-lg-2 col-md-2">
                 <button id="filtrar" class="btn"> Filtrar</button>
             </div>
 
