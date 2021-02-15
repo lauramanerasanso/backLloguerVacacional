@@ -247,7 +247,7 @@ include('header.php');
     };
 
 
-    xhttp.open("GET", "http://api.mallorcarustic.me/reserves/grafic-pie", false);
+    xhttp.open("GET", "http://api.mallorcarustic.me/reserves/grafic-pie", true);
     xhttp.send();
 
     window.cache = {
@@ -260,7 +260,7 @@ include('header.php');
         url: 'http://api.mallorcarustic.me/reserves/grafic-bar',
         method: 'POST',
         data: {},
-        async: false,
+        async: true,
         success: function (data) {
             var reserves = JSON.parse(data);
 
