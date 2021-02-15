@@ -119,7 +119,7 @@ $idCasa = Router::$uri_values[0];
 
                             <label class="control-label col-md-2 col-sm-3 offset-md-1" for="inlineFormCustomSelect">Num
                                 Habitacions</label>
-                            <div class="col-xl-1 col-md-2 col-sm-1">
+                            <div class="col-xl-2 col-md-2 col-sm-1">
                                 <select class="custom-select" id="hab">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -133,7 +133,7 @@ $idCasa = Router::$uri_values[0];
 
                             <label class="control-label col-md-2 col-sm-2 offset-md-2" for="inlineFormCustomSelect">Num
                                 Banys</label>
-                            <div class="col-xl-1 col-md-2 col-sm-1">
+                            <div class="col-xl-2 col-md-2 col-sm-1">
                                 <select class="custom-select" id="banys">
                                     <option value="1">1</option>
                                     <option value="2">2</option>

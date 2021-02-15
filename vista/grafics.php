@@ -145,90 +145,6 @@ include('header.php');
 <script>
 
 
-    window.cache = {
-        mesos: ["Gener", "Febrer", "Març", "Abril", "Maig", "Juny", "Juliol", "Agost", "Setembre", "Octubre", "Novembre", "Desembre"],
-        reserves: []
-
-    };
-
-    $.ajax({
-        url: 'http://api.mallorcarustic.me/reserves/grafic-bar',
-        method: 'POST',
-        data: {},
-        async: false,
-        success: function (data) {
-            var reserves = JSON.parse(data);
-
-            for (r in reserves) {
-                var numRes = reserves[r].num;
-                window.cache.reserves.push(numRes);
-            }
-
-            if (window.cache.reserves.length < 12) {
-                for (var i = window.cache.reserves.length; i < 12; i++) {
-                    window.cache.reserves.push(0);
-                    console.log(window.cache.reserves);
-                }
-            }
-        }
-    });
-
-
-    // 2. Define chart dimensions + margin
-    var margin = {top: 40, bottom: 80, right: 480, left: 80};
-    var width = 1280 - margin.left - margin.right;
-    var height = 550 - margin.top - margin.bottom;
-
-    // 3. Append outer SVG viewport to body
-    var svg = d3.select('.chart').append('svg')
-        .attr('width', 820)
-        .attr('height', height + margin.top + margin.bottom);
-
-    // 4. create inner SVG canvas
-    var innerSVG = svg.append('g')
-        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
-
-    // 5. Define X,Y scales
-    var scaleX = d3.scaleBand().domain(window.cache.mesos).range([0, width]);
-    var scaleY = d3.scaleLinear().domain([0, 10]).range([height, 0]); //aquí canviam nums esquerra
-
-    // 6. Define X,Y axis
-    var xAxis = innerSVG.append('g').call(d3.axisBottom(scaleX));
-    var yAxis = innerSVG.append('g').call(d3.axisLeft(scaleY));
-
-    // 7. Move X axis to chart bottom & rotate X labels
-    var newXaxis = xAxis.attr('transform', 'translate(0,' + height + ')');
-    var rotateX = xAxis.selectAll("text").attr("transform", "rotate(-90)").attr("y", '-3').attr('x', '-30');
-
-    // 8. Add Y axis units
-    var yUnits = innerSVG.append('text')
-        .text('n Reserves')
-        .attr('class', 'yUnits')
-        .attr('x', -52)
-        .attr('y', -35)
-
-    // 9. Create bar chart data items
-    var sortable_data = innerSVG.selectAll('rect')
-        .data(window.cache.reserves)
-        .enter().append('rect')
-        .attr('width', '40')
-        .attr('height', function (d) {
-            return height - scaleY(d);
-        })
-        .attr('x', function (d, i) {
-            return 10 + (i * 60);
-        })
-        .attr('y', function (d) {
-            return scaleY(d);
-        })
-        .attr('class', 'bar')
-
-    // 10. Display calculations in callout
-    var all_reserves = d3.sum(window.cache.reserves);
-    var average_reserves = Math.round((all_reserves / window.cache.mesos.length));
-    d3.select('.callout p').text('Mitja: ' + average_reserves + ' reserves / mes');
-
-
     var xhttp = new XMLHttpRequest();
 
     var dataset = [];
@@ -334,6 +250,87 @@ include('header.php');
     xhttp.open("GET", "http://api.mallorcarustic.me/reserves/grafic-pie", true);
     xhttp.send();
 
+    window.cache = {
+        mesos: ["Gener", "Febrer", "Març", "Abril", "Maig", "Juny", "Juliol", "Agost", "Setembre", "Octubre", "Novembre", "Desembre"],
+        reserves: []
+
+    };
+
+    $.ajax({
+        url: 'http://api.mallorcarustic.me/reserves/grafic-bar',
+        method: 'POST',
+        data: {},
+        async: false,
+        success: function (data) {
+            var reserves = JSON.parse(data);
+
+            for (r in reserves) {
+                var numRes = reserves[r].num;
+                window.cache.reserves.push(numRes);
+            }
+
+            if (window.cache.reserves.length < 12) {
+                for (var i = window.cache.reserves.length; i < 12; i++) {
+                    window.cache.reserves.push(0);
+                    console.log(window.cache.reserves);
+                }
+            }
+        }
+    });
+
+        // 2. Define chart dimensions + margin
+        var margin = {top: 40, bottom: 80, right: 480, left: 80};
+    var width = 1280 - margin.left - margin.right;
+    var height = 550 - margin.top - margin.bottom;
+
+    // 3. Append outer SVG viewport to body
+    var svg = d3.select('.chart').append('svg')
+        .attr('width', 820)
+        .attr('height', height + margin.top + margin.bottom);
+
+    // 4. create inner SVG canvas
+    var innerSVG = svg.append('g')
+        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+    // 5. Define X,Y scales
+    var scaleX = d3.scaleBand().domain(window.cache.mesos).range([0, width]);
+    var scaleY = d3.scaleLinear().domain([0, 10]).range([height, 0]); //aquí canviam nums esquerra
+
+    // 6. Define X,Y axis
+    var xAxis = innerSVG.append('g').call(d3.axisBottom(scaleX));
+    var yAxis = innerSVG.append('g').call(d3.axisLeft(scaleY));
+
+    // 7. Move X axis to chart bottom & rotate X labels
+    var newXaxis = xAxis.attr('transform', 'translate(0,' + height + ')');
+    var rotateX = xAxis.selectAll("text").attr("transform", "rotate(-90)").attr("y", '-3').attr('x', '-30');
+
+    // 8. Add Y axis units
+    var yUnits = innerSVG.append('text')
+        .text('n Reserves')
+        .attr('class', 'yUnits')
+        .attr('x', -52)
+        .attr('y', -35)
+
+    // 9. Create bar chart data items
+    var sortable_data = innerSVG.selectAll('rect')
+        .data(window.cache.reserves)
+        .enter().append('rect')
+        .attr('width', '40')
+        .attr('height', function (d) {
+            return height - scaleY(d);
+        })
+        .attr('x', function (d, i) {
+            return 10 + (i * 60);
+        })
+        .attr('y', function (d) {
+            return scaleY(d);
+        })
+        .attr('class', 'bar')
+
+    // 10. Display calculations in callout
+    var all_reserves = d3.sum(window.cache.reserves);
+    var average_reserves = Math.round((all_reserves / window.cache.mesos.length));
+    d3.select('.callout p').text('Mitja: ' + average_reserves + ' reserves / mes');
 </script>
 </body>
 
