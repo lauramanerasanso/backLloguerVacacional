@@ -94,7 +94,7 @@ include('header.php');
             </div>
         </div>
 
-        <button type="button" class="btn" id="btnModalAfegirDates"><i class="far fa-calendar-plus">  Afegir noves dates a una tarifa </i></button>
+        <button type="button" class="btn" id="btnModalAfegirDates"><i class="far fa-calendar-plus"></i> Afegir noves dates a una tarifa</button>
 
         <div class="modal fade" id="modalAfegirDates">
 

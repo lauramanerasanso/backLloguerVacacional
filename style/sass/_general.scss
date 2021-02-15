@@ -12,6 +12,7 @@ header{
 }
 body{
   background-color: whitesmoke;
+  font-family: "Noto Sans JP", sans-serif;
 }
 body header nav ul li .nav-link {
   padding-right: 25px !important;
@@ -49,6 +50,13 @@ body header nav ul li .nav-link {
 .card{
   .col-md-4{
     padding: 0px;
+  }
+  .card-title{
+    font-family: "Bungee", cursive;
+  }
+
+  .card-text{
+    font-family: 'Noto Sans JP', sans-serif;
   }
 }
 
@@ -102,8 +110,10 @@ fieldset {
 }
 
 .list-group{
+  font-family: "Noto Sans JP", sans-serif;
   .list-group-item-action:hover{
     background-color: $color_p_hover !important;
+
   }
   .list-group-item-action:active{
     background-color: $color_principal !important;

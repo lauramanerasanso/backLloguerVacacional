@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/css/_general.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;500&display=swap" rel="stylesheet">
 
 </head>
 
@@ -51,8 +52,7 @@
 
         <div class="tab-pane fade show active" id="dades" role="tabpanel" aria-labelledby="dades-tab">
             <div class="container">
-                <h5 style="margin-top: 2%;">Dades generals :</h5>
-                <div class="form-row">
+                <div class="form-row" style="margin-top: 2%;">
                     <div class="form-group col-6">
                         <label class="control-label">Nom</label>
 
@@ -98,14 +98,13 @@
 
         <div class="tab-pane fade" id="caract" role="tabpanel" aria-labelledby="caract-tab">
             <div class="container con">
-                <h4 style="margin-top: 2%;">Característiques :</h4>
-                <fieldset>
+                <fieldset style="margin-top: 2%;">
                     <legend id="leg1">Distribució</legend>
                     <div class="row">
 
                         <label class="control-label col-md-2 col-sm-3 offset-md-1" for="inlineFormCustomSelect">Num
                             Habitacions</label>
-                        <div class="col-xl-1 col-md-2 col-sm-1">
+                        <div class="col-xl-2 col-md-2 col-sm-1">
                             <select class="custom-select" id="hab">
                                 <option>1</option>
                                 <option>2</option>
@@ -119,7 +118,7 @@
 
                         <label class="control-label col-md-2 col-sm-2 offset-md-2" for="inlineFormCustomSelect">Num
                             Banys</label>
-                        <div class="col-xl-1 col-md-2 col-sm-1">
+                        <div class="col-xl-2 col-md-2 col-sm-1">
                             <select class="custom-select" id="banys">
                                 <option>1</option>
                                 <option>2</option>
@@ -231,7 +230,6 @@
 
         <div class="tab-pane fade" id="ubi" role="tabpanel" aria-labelledby="ubi-tab">
             <div class="container">
-                <h4 style="margin-top: 2%;">Coordenades :</h4>
                 <div class="row">
 
                     <div id="googleMap" style="width:100%;height:400px;margin:10px;align-content: center"></div>
@@ -258,7 +256,7 @@
         </div>
         <div class="tab-pane fade" id="tarifa" role="tabpanel" aria-labelledby="imatges-tab">
             <div class="container">
-                <h4 style="margin-top: 2%;">Tarifa:</h4>
+                
                 <div class="row" style="margin-top: 2%;">
                     <label class="control-label col-xl-2 col-md-3 col-sm-3" for="inlineFormCustomSelect">Preu
                         Defecte</label>
@@ -280,7 +278,7 @@
             <div class="container">
                 <form method="post" id="myForm" action="http://api.mallorcarustic.me/casa/crear-imatges"
                       enctype="multipart/form-data">
-                    <h4 style="margin-top: 2%;">Imatges :</h4>
+                
                     <div class="row" style="margin-top: 2%;">
                         <div class="col-md-6">
                             <div class="custom-file">

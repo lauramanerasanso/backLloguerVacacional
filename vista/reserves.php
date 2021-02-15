@@ -49,6 +49,8 @@
     <link rel="stylesheet" type="text/css"
           href="https://cdn.datatables.net/responsive/1.0.0/css/dataTables.responsive.css">
 
+          <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;500&display=swap" rel="stylesheet">
+
 
 </head>
 

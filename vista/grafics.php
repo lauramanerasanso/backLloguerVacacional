@@ -30,6 +30,7 @@
             crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="/style/css/_general.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;500&display=swap" rel="stylesheet">
     <style>
 
 

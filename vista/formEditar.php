@@ -21,6 +21,7 @@ $idCasa = Router::$uri_values[0];
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../../style/css/_general.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;500&display=swap" rel="stylesheet">
 
 </head>
 
@@ -65,8 +66,7 @@ $idCasa = Router::$uri_values[0];
 
             <div class="tab-pane fade show active" id="dades" role="tabpanel" aria-labelledby="dades-tab">
                 <div class="container">
-                    <h5 style="margin-top: 2%;">Dades generals :</h5>
-                    <div class="form-row">
+                    <div class="form-row" style="margin-top: 2%;">
                         <div class="form-group col-6">
                             <label class="control-label">Nom</label>
 
@@ -112,8 +112,7 @@ $idCasa = Router::$uri_values[0];
 
             <div class="tab-pane fade" id="caract" role="tabpanel" aria-labelledby="caract-tab">
                 <div class="container con">
-                    <h4 style="margin-top: 2%;">Característiques :</h4>
-                    <fieldset>
+                    <fieldset style="margin-top: 2%;">
                         <legend id="leg1">Distribució</legend>
                         <div class="row">
 
@@ -245,7 +244,6 @@ $idCasa = Router::$uri_values[0];
 
             <div class="tab-pane fade" id="ubi" role="tabpanel" aria-labelledby="ubi-tab">
                 <div class="container">
-                    <h4 style="margin-top: 2%;">Coordenades :</h4>
                     <div class="row">
 
                         <div id="googleMap" style="width:100%;height:300px;margin:10px;align-content: center"></div>
@@ -274,7 +272,6 @@ $idCasa = Router::$uri_values[0];
             </div>
             <div class="tab-pane fade" id="tarifa" role="tabpanel" aria-labelledby="imatges-tab">
                 <div class="container">
-                    <h4 style="margin-top: 2%;">Tarifa:</h4>
                     <div class="row" style="margin-top: 2%;">
                         <label class="control-label col-xl-2 col-md-3 col-sm-3" for="inlineFormCustomSelect">Preu
                             Defecte</label>
