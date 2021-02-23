@@ -228,7 +228,7 @@ include('header.php');
                 }
             };
 
-            xhttp.open("POST", "http://api.mallorcarustic.me/casa/bloquejar", true);
+            xhttp.open("POST", "https://api.mallorcarustic.me/casa/bloquejar", true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhttp.send("idCasa="+window.cache.idCasa+"&dataInici="+dataInici+"&dataFi="+dataFi);
 
@@ -257,7 +257,7 @@ include('header.php');
             var tbody = $("<tbody/>");
 
             $.ajax({
-                url: 'http://api.mallorcarustic.me/casa/bloqueig', //select bloq
+                url: 'https://api.mallorcarustic.me/casa/bloqueig', //select bloq
                 method: 'POST',
                 data: {
                     idCasa: window.cache.idCasa
@@ -328,7 +328,7 @@ include('header.php');
             var nouFi = $("#editFi").val();
 
             $.ajax({
-                url: 'http://api.mallorcarustic.me/casa/editar-bloqueig',
+                url: 'https://api.mallorcarustic.me/casa/editar-bloqueig',
                 method: 'POST',
                 data: {
                     idCasa: window.cache.idCasa,
@@ -351,7 +351,7 @@ include('header.php');
             var inici = $("#delDataB").val();
 
             $.ajax({
-                url: 'http://api.mallorcarustic.me/casa/desbloquejar',
+                url: 'https://api.mallorcarustic.me/casa/desbloquejar',
                 method: 'POST',
                 data: {
                     idCasa: window.cache.idCasa,
@@ -369,7 +369,7 @@ include('header.php');
         });
 
         $.ajax({
-            url: "http://api.mallorcarustic.me/casa/llegir-una",
+            url: "https://api.mallorcarustic.me/casa/llegir-una",
             method: "GET",
             data: {
                 id_casa: <?=$idCasa?>,

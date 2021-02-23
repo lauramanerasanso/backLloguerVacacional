@@ -165,7 +165,7 @@ include('header.php');
 
             responsive: true,
             ajax: {
-                url: 'http://api.mallorcarustic.me/reserves',
+                url: 'https://api.mallorcarustic.me/reserves',
                 dataSrc: '',
                 type: "POST"
             },
@@ -257,7 +257,7 @@ include('header.php');
                 t = $('#taula').DataTable({
                     responsive: true,
                     ajax: {
-                        url: 'http://api.mallorcarustic.me/reserves/filtrar',
+                        url: 'https://api.mallorcarustic.me/reserves/filtrar',
                         dataSrc: '',
                         type: "POST",
                         data: {
@@ -313,7 +313,7 @@ include('header.php');
                 t = $('#taula').DataTable({
                     responsive: true,
                     ajax: {
-                        url: 'http://api.mallorcarustic.me/reserves/filtrar',
+                        url: 'https://api.mallorcarustic.me/reserves/filtrar',
                         dataSrc: '',
                         type: "POST",
                         data: {
@@ -367,7 +367,7 @@ include('header.php');
                 t = $('#taula').DataTable({
                     responsive: true,
                     ajax: {
-                        url: 'http://api.mallorcarustic.me/reserves/filtrar',
+                        url: 'https://api.mallorcarustic.me/reserves/filtrar',
                         dataSrc: '',
                         type: "POST",
                         data: {
@@ -419,7 +419,7 @@ include('header.php');
                 t = $('#taula').DataTable({
                     responsive: true,
                     ajax: {
-                        url: 'http://api.mallorcarustic.me/reserves/filtrar',
+                        url: 'https://api.mallorcarustic.me/reserves/filtrar',
                         dataSrc: '',
                         type: "POST",
                         data: {
@@ -473,7 +473,7 @@ include('header.php');
                 t = $('#taula').DataTable({
                     responsive: true,
                     ajax: {
-                        url: 'http://api.mallorcarustic.me/reserves/filtrar',
+                        url: 'https://api.mallorcarustic.me/reserves/filtrar',
                         dataSrc: '',
                         type: "POST",
                         data: {
@@ -526,7 +526,7 @@ include('header.php');
                 t = $('#taula').DataTable({
                     responsive: true,
                     ajax: {
-                        url: 'http://api.mallorcarustic.me/reserves/filtrar',
+                        url: 'https://api.mallorcarustic.me/reserves/filtrar',
                         dataSrc: '',
                         type: "POST",
                         data: {
@@ -575,7 +575,6 @@ include('header.php');
                 });
 
             }
-
 
         });
 

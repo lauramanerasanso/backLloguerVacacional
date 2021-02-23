@@ -84,7 +84,7 @@
 
 
         $.ajax({
-            url: "http://api.mallorcarustic.me/usuari/check-pass",
+            url: "https://api.mallorcarustic.me/usuari/check-pass",
             method: "POST",
             xhrFields: {
                 withCredentials: true
@@ -100,7 +100,7 @@
                 if (r['success']) {
                     localStorage.setItem('sessio',r['session_id']);
                     console.log(localStorage.getItem('sessio'));
-                    location.href = "http://admin.mallorcarustic.me/cases";
+                    location.href = "https://admin.mallorcarustic.me/cases";
                 }else{
                     $("#error").modal();
                     $("#username").val("");

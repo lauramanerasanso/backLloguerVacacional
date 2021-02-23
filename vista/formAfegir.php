@@ -276,7 +276,7 @@
         </div>
         <div class="tab-pane fade" id="imatges" role="tabpanel" aria-labelledby="imatges-tab">
             <div class="container">
-                <form method="post" id="myForm" action="http://api.mallorcarustic.me/casa/crear-imatges"
+                <form method="post" id="myForm" action="https://api.mallorcarustic.me/casa/crear-imatges"
                       enctype="multipart/form-data">
                 
                     <div class="row" style="margin-top: 2%;">
@@ -425,7 +425,7 @@
 
             var xhttp = new XMLHttpRequest();
 
-            xhttp.open("POST", "http://api.mallorcarustic.me/casa/crear", true);
+            xhttp.open("POST", "https://api.mallorcarustic.me/casa/crear", true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhttp.send("pob=" + pob + "&banys=" + banys + "&hab=" + hab + "&x=" + x + "&y=" + y + "&preu=" + preu + "&nom1=" + nom1 + "&nom2=" + nom2 + "&desc1=" + desc1 + "&desc2=" + desc2 + "&caract=" + arrayC);
 

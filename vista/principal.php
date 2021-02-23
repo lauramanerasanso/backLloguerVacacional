@@ -77,13 +77,13 @@ include('header.php');
                 }
             }
         };
-        xhttp.open("GET", "http://api.mallorcarustic.me/casa/llegir", true);
+        xhttp.open("GET", "https://api.mallorcarustic.me/casa/llegir", true);
         xhttp.send();
     }
 
 
     $.ajax({
-        url: "http://api.mallorcarustic.me/usuari/sessio",
+        url: "https://api.mallorcarustic.me/usuari/sessio",
         method: "POST",
         xhrFields: {
             withCredentials: true
@@ -97,7 +97,7 @@ include('header.php');
                 carregarCases();
 
             }else{
-                location.href = "http://admin.mallorcarustic.me";
+                location.href = "https://admin.mallorcarustic.me";
             }
         }
     });

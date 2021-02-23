@@ -301,7 +301,7 @@ $idCasa = Router::$uri_values[0];
     $(document).ready(function () {
 
         $.ajax({
-            url: "http://api.mallorcarustic.me/casa/llegir-una",
+            url: "https://api.mallorcarustic.me/casa/llegir-una",
             method: "GET",
             data: {
                 id_casa: <?=$idCasa?>,
@@ -359,7 +359,7 @@ $idCasa = Router::$uri_values[0];
 
             var xhttp = new XMLHttpRequest();
 
-            xhttp.open("POST", "http://api.mallorcarustic.me/casa/editar", true);
+            xhttp.open("POST", "https://api.mallorcarustic.me/casa/editar", true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhttp.send("idCasa=" + idCasa + "&pob=" + pob + "&banys=" + banys + "&hab=" + hab + "&x=" + x + "&y=" + y + "&preu=" + preu + "&nom1=" + nom1 + "&nom2=" + nom2 + "&desc1=" + desc1 + "&desc2=" + desc2 + "&caract=" + arrayC);
 
@@ -395,7 +395,7 @@ $idCasa = Router::$uri_values[0];
 
             };
 
-            xhttp.open("GET", "http://api.mallorcarustic.me/casa/llegir-una?id=" + idCasa, true);
+            xhttp.open("GET", "https://api.mallorcarustic.me/casa/llegir-una?id=" + idCasa, true);
             xhttp.send();
 
 
@@ -424,7 +424,7 @@ $idCasa = Router::$uri_values[0];
 
             };
 
-            xhttp.open("GET", "http://api.mallorcarustic.me/casa/llegir-una?codi=" + idCasa, true);
+            xhttp.open("GET", "https://api.mallorcarustic.me/casa/llegir-una?codi=" + idCasa, true);
             xhttp.send();
         }
 
@@ -461,7 +461,7 @@ $idCasa = Router::$uri_values[0];
 
             };
 
-            xhttp.open("GET", "http://api.mallorcarustic.me/casa/llegir-una?idCasa=" + idCasa, true);
+            xhttp.open("GET", "https://api.mallorcarustic.me/casa/llegir-una?idCasa=" + idCasa, true);
             xhttp.send();
 
         }

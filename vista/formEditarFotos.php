@@ -73,7 +73,7 @@ $idCasa = Router::$uri_values[0];
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="img_principal" role="tabpanel"
                      aria-labelledby="img_principal-tab">
-                    <form method="post" id="myForm" action="http://api.mallorcarustic.me/casa/editar-imatges"
+                    <form method="post" id="myForm" action="https://api.mallorcarustic.me/casa/editar-imatges"
                           enctype="multipart/form-data">
 
 
@@ -111,7 +111,7 @@ $idCasa = Router::$uri_values[0];
 
 
                 <div class="tab-pane fade" id="img_2" role="tabpanel" aria-labelledby="img_2-tab">
-                    <form method="post" id="myForm" action="http://api.mallorcarustic.me/casa/editar-imatges"
+                    <form method="post" id="myForm" action="https://api.mallorcarustic.me/casa/editar-imatges"
                           enctype="multipart/form-data">
 
                         <div class="row" style="margin-top: 2%">
@@ -142,7 +142,7 @@ $idCasa = Router::$uri_values[0];
 
                 </div>
                 <div class="tab-pane fade" id="img_3" role="tabpanel" aria-labelledby="img_3-tab">
-                    <form method="post" id="myForm" action="http://api.mallorcarustic.me/casa/editar-imatges"
+                    <form method="post" id="myForm" action="https://api.mallorcarustic.me/casa/editar-imatges"
                           enctype="multipart/form-data">
 
                         <div class="row" style="margin-top: 2%">
@@ -174,7 +174,7 @@ $idCasa = Router::$uri_values[0];
 
                 </div>
                 <div class="tab-pane fade" id="img_4" role="tabpanel" aria-labelledby="img_4-tab">
-                    <form method="post" id="myForm" action="http://api.mallorcarustic.me/casa/editar-imatges"
+                    <form method="post" id="myForm" action="https://api.mallorcarustic.me/casa/editar-imatges"
                           enctype="multipart/form-data">
 
 
@@ -206,7 +206,7 @@ $idCasa = Router::$uri_values[0];
                 </div>
                 <div class="tab-pane fade" id="img_5" role="tabpanel" aria-labelledby="img_5-tab">
 
-                    <form method="post" id="myForm" action="http://api.mallorcarustic.me/casa/editar-imatges"
+                    <form method="post" id="myForm" action="https://api.mallorcarustic.me/casa/editar-imatges"
                           enctype="multipart/form-data">
                         <div class="row" style="margin-top: 2%">
                             <div class="col-md-4 offset-3">
@@ -242,7 +242,7 @@ $idCasa = Router::$uri_values[0];
     <?php include "php/control.php";?>
     $(document).ready(function () {
         $.ajax({
-            url: "http://api.mallorcarustic.me/casa/llegir-una",
+            url: "https://api.mallorcarustic.me/casa/llegir-una",
             method: "GET",
             data: {
                 id_casa: <?=$idCasa?>,
@@ -305,7 +305,7 @@ $idCasa = Router::$uri_values[0];
 
 
             $.ajax({
-                url: 'http://api.mallorcarustic.me/casa/editar-imatges?idCasa=<?= $idCasa ?>&idImg=1',
+                url: 'https://api.mallorcarustic.me/casa/editar-imatges?idCasa=<?= $idCasa ?>&idImg=1',
                 type: 'POST',
                 data: formData,
                 contentType: false,
@@ -331,7 +331,7 @@ $idCasa = Router::$uri_values[0];
             formData.append('file', foto);
 
             $.ajax({
-                url: 'http://api.mallorcarustic.me/casa/editar-imatges?idCasa=<?= $idCasa ?>&idImg=2',
+                url: 'https://api.mallorcarustic.me/casa/editar-imatges?idCasa=<?= $idCasa ?>&idImg=2',
                 type: 'POST',
                 data: formData,
                 contentType: false,
@@ -358,7 +358,7 @@ $idCasa = Router::$uri_values[0];
 
 
             $.ajax({
-                url: 'http://api.mallorcarustic.me/casa/editar-imatges?idCasa=<?= $idCasa ?>&idImg=3',
+                url: 'https://api.mallorcarustic.me/casa/editar-imatges?idCasa=<?= $idCasa ?>&idImg=3',
                 type: 'POST',
                 data: formData,
                 contentType: false,
@@ -383,7 +383,7 @@ $idCasa = Router::$uri_values[0];
 
 
             $.ajax({
-                url: 'http://api.mallorcarustic.me/casa/editar-imatges?idCasa=<?= $idCasa ?>&idImg=4',
+                url: 'https://api.mallorcarustic.me/casa/editar-imatges?idCasa=<?= $idCasa ?>&idImg=4',
                 type: 'POST',
                 data: formData,
                 contentType: false,
@@ -408,7 +408,7 @@ $idCasa = Router::$uri_values[0];
             formData.append('file', foto);
 
             $.ajax({
-                url: 'http://api.mallorcarustic.me/casa/editar-imatges?idCasa=<?= $idCasa ?>&idImg=5',
+                url: 'https://api.mallorcarustic.me/casa/editar-imatges?idCasa=<?= $idCasa ?>&idImg=5',
                 type: 'POST',
                 data: formData,
                 contentType: false,

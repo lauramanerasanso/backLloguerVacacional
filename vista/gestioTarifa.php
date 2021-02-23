@@ -302,7 +302,7 @@ include('header.php');
             var tbody = $("<tbody/>");
 
             $.ajax({
-                url: 'http://api.mallorcarustic.me/tarifa/llegir',
+                url: 'https://api.mallorcarustic.me/tarifa/llegir',
                 method: 'POST',
                 data: {
                     idCasa: window.cache.idCasa
@@ -421,7 +421,7 @@ include('header.php');
                     }
                 }
             };
-            xhttp.open("POST", "http://api.mallorcarustic.me/tarifa/aplicar", true);
+            xhttp.open("POST", "https://api.mallorcarustic.me/tarifa/aplicar", true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhttp.send("idCasa=" + window.cache.idCasa);
         }
@@ -449,7 +449,7 @@ include('header.php');
                 }
             };
 
-            xhttp.open("POST", "http://api.mallorcarustic.me/tarifa/crear", true);
+            xhttp.open("POST", "https://api.mallorcarustic.me/tarifa/crear", true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhttp.send("idCasa=" + window.cache.idCasa + "&preuTarifa=" + preuTarifa + "&dataInici=" + dataInici + "&dataFi=" + dataFi + "&nomTarifa=" + nomTarifa);
 
@@ -486,7 +486,7 @@ include('header.php');
 
                 }
             };
-            xhttp.open("POST", "http://api.mallorcarustic.me/tarifa/crear", true);
+            xhttp.open("POST", "https://api.mallorcarustic.me/tarifa/crear", true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhttp.send("idCasa=" + window.cache.idCasa + "&preuTarifa=" + preuTarifa + "&dataInici=" + dataInici + "&dataFi=" + dataFi + "&nomTarifa=" + nomTarifa);
 
@@ -507,7 +507,7 @@ include('header.php');
             var nouFi = $("#editFi").val();
 
             $.ajax({
-                url: 'http://api.mallorcarustic.me/tarifa/editar',
+                url: 'https://api.mallorcarustic.me/tarifa/editar',
                 method: 'POST',
                 data: {
                     idCasa: window.cache.idCasa,
@@ -538,7 +538,7 @@ include('header.php');
             var inici = $("#delDataT").val();
 
             $.ajax({
-                url: 'http://api.mallorcarustic.me/tarifa/eliminar',
+                url: 'https://api.mallorcarustic.me/tarifa/eliminar',
                 method: 'POST',
                 data: {
                     idCasa: window.cache.idCasa,
@@ -557,7 +557,7 @@ include('header.php');
 
         });
         $.ajax({
-            url: "http://api.mallorcarustic.me/casa/llegir-una",
+            url: "https://api.mallorcarustic.me/casa/llegir-una",
             method: "GET",
             data: {
                 id_casa: <?=$idCasa?>,

@@ -89,17 +89,17 @@
                 var info = JSON.parse(this.responseText);
 
                 if (info == "OK") {
-                    location.href = "http://admin.mallorcarustic.me/cases";
+                    location.href = "https://admin.mallorcarustic.me/cases";
                 } else {
                     alert("Contrasenya incorrecta");
-                    location.href = "http://admin.mallorcarustic.me";
+                    location.href = "https://admin.mallorcarustic.me";
                 }
 
             }
 
         };
 
-        xhttp.open("POST", "http://api.mallorcarustic.me/usuari/change-pass", true);
+        xhttp.open("POST", "https://api.mallorcarustic.me/usuari/change-pass", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send("oldPasswd=" + vella + "&newPasswd=" + nova);
 

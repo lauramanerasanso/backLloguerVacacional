@@ -121,7 +121,7 @@ include('header.php');
                 return window.cache.data;
 
             $.ajax({
-                url: 'http://api.mallorcarustic.me/data/calendari',
+                url: 'https://api.mallorcarustic.me/data/calendari',
                 method: 'POST',
                 data: {
                     id: <?= $idCasa ?>,
@@ -167,7 +167,7 @@ include('header.php');
         });
 
         $.ajax({
-            url: "http://api.mallorcarustic.me/casa/llegir-una",
+            url: "https://api.mallorcarustic.me/casa/llegir-una",
             method: "GET",
             data: {
                id_casa: <?=$idCasa?>,

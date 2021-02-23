@@ -47,7 +47,7 @@
             color: #444;
             text-align: center;
             margin: 0px 10px;
-            0px;
+            
         }
 
         .chart {
@@ -248,7 +248,7 @@ include('header.php');
     };
 
 
-    xhttp.open("POST", "http://api.mallorcarustic.me/reserves/grafic-pie", true);
+    xhttp.open("POST", "https://api.mallorcarustic.me/reserves/grafic-pie", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send();
 
@@ -259,7 +259,7 @@ include('header.php');
     };
 
     $.ajax({
-        url: 'http://api.mallorcarustic.me/reserves/grafic-bar',
+        url: 'https://api.mallorcarustic.me/reserves/grafic-bar',
         method: 'POST',
         data: {},
         async: false,
