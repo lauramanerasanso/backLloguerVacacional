@@ -28,7 +28,7 @@
 </body>
 <script>
     $.ajax({
-        url: "http://api.mallorcarustic.me/usuari/tancar-sessio",
+        url: "https://api.mallorcarustic.me/usuari/tancar-sessio",
         method: "POST",
         xhrFields: {
             withCredentials: true
@@ -39,7 +39,7 @@
         async: false,
         success: function (response) {
             if (response == "OK") {
-                location.href = "http://admin.mallorcarustic.me";
+                location.href = "https://admin.mallorcarustic.me";
             }
         }
     });

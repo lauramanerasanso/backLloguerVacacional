@@ -1,5 +1,5 @@
 $.ajax({
-url: "http://api.mallorcarustic.me/usuari/sessio",
+url: "https://api.mallorcarustic.me/usuari/sessio",
 method: "POST",
 xhrFields: {
 withCredentials: true
@@ -10,7 +10,7 @@ session_id: localStorage.getItem('sessio')
 async: false,
 success: function (response) {
 if (response != "OK") {
-location.href = "http://admin.mallorcarustic.me";
+location.href = "https://admin.mallorcarustic.me";
 }
 }
 });
