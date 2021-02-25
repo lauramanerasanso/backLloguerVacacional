@@ -1,8 +1,7 @@
 <?php
 
 
-class Router
-{
+class Router{
 
     protected $rutes = [];
     public static $uri_values = [];
@@ -36,13 +35,15 @@ class Router
         {
             $route_uri_array = explode('/', $route_uri);
 
-            if (count($uri_array) != count($route_uri_array))
+            if (count($uri_array) != count($route_uri_array)){
                 continue;
+            }
 
             for ($index = 0; $index < count($uri_array); $index++)
             {
-                if ($uri_array[$index] == $route_uri_array[$index])
+                if ($uri_array[$index] == $route_uri_array[$index]){
                     continue;
+                }
 
                 if ($route_uri_array[$index] == '*')
                 {

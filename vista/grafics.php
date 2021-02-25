@@ -248,7 +248,7 @@ include('header.php');
     };
 
 
-    xhttp.open("POST", "https://api.mallorcarustic.me/reserves/grafic-pie", true);
+    xhttp.open("POST", "https://api.mallorcarustic.me/reserves/grafic-pie", false);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send();
 
