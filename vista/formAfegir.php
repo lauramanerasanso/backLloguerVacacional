@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html >
 <html>
 
@@ -8,9 +6,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style/Bootstrap/dist/css/bootstrap.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
@@ -18,6 +17,7 @@
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/css/_general.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
 </head>
 
@@ -53,42 +53,42 @@
         <div class="tab-pane fade show active" id="dades" role="tabpanel" aria-labelledby="dades-tab">
             <div class="container">
                 <div class="form-row" style="margin-top: 2%;">
-                    <div class="form-group col-6">
+                    <div class="form-group col-md-6">
                         <label class="control-label">Nom</label>
 
-                        <input type="text" name="nomCasa" id="nomCasa" class="form-control col-10">
+                        <input type="text" name="nomCasa" id="nomCasa" class="form-control col-10" required>
 
 
                     </div>
 
-                    <div class="form-group col-6">
+                    <div class="form-group col-md-6">
                         <label class="control-label">Name</label>
 
-                        <input type="text" name="nomAngles" id="nomCasaAngles" class="form-control col-10">
+                        <input type="text" name="nomAngles" id="nomCasaAngles" class="form-control col-10" required>
 
 
                     </div>
                 </div>
                 <br/>
                 <div class="form-row">
-                    <div class="form-group col-6">
+                    <div class="form-group col-md-6">
 
                         <label class="control-label" for="desc1">Descripció</label>
 
-                        <textarea class="form-control col-10" id="descripcio" rows="5"></textarea>
+                        <textarea class="form-control col-10" id="descripcio" rows="5" required></textarea>
                     </div>
-                    <div class="form-group col-6">
+                    <div class="form-group col-md-6">
 
                         <label class="control-label" for="inlineFormCustomSelect">Description</label>
 
-                        <textarea class="form-control col-10" id="descripcioAngles" rows="5"></textarea>
+                        <textarea class="form-control col-10" id="descripcioAngles" rows="5" required></textarea>
                     </div>
 
 
                 </div>
                 <br/>
                 <div class="d-flex">
-                    <button class="btn col-md-2 ml-auto" id="continuar">Continuar</button>
+                    <button class="btn btn-primary col-lg-2 col-md-3 ml-auto" id="continuar">Continuar</button>
                 </div>
             </div>
 
@@ -223,7 +223,7 @@
             </div>
             <br/>
             <div class="d-flex">
-                <button class="btn  col-md-2 ml-auto" id="continuar2">Continuar</button>
+                <button class="btn btn-primary col-lg-2 col-md-3 ml-auto" id="continuar2">Continuar</button>
             </div>
 
         </div>
@@ -236,49 +236,62 @@
 
                 </div>
                 <div class="row" style="margin-top: 2%;">
-                    <label class="control-label col-md-1" for="inlineFormCustomSelect">Longitud</label>
-                    <input type="text" class="form-control col-3" id="x">
+                    <div class="col-md-4">
+                        <label class="control-label" for="x">Longitud</label>
+                        <input type="text" class="form-control" id="x">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="control-label" for="y">Latitud</label>
+                        <input type="text" class="form-control" id="y">
+                    </div>
+                    <div class="col-md-4">
 
-                    <label class="control-label col-md-1" for="inlineFormCustomSelect">Latitud</label>
-                    <input type="text" class="form-control col-3" id="y">
-
-                    <label class="control-label col-md-1" for="inlineFormCustomSelect">Població</label>
-                    <input type="text" class="form-control col-3" id="pob">
+                        <label class="control-label" for="pob">Població</label>
+                        <input type="text" class="form-control" id="pob">
+                    </div>
                 </div>
                 <br/>
 
                 <br/>
                 <div class="d-flex">
-                    <button class="btn  col-md-2 ml-auto" id="continuar3">Continuar</button>
+                    <button class="btn btn-primary col-lg-2 col-md-3 ml-auto" id="continuar3">Continuar</button>
                 </div>
 
             </div>
         </div>
         <div class="tab-pane fade" id="tarifa" role="tabpanel" aria-labelledby="imatges-tab">
             <div class="container">
-                
-                <div class="row" style="margin-top: 2%;">
-                    <label class="control-label col-xl-2 col-md-3 col-sm-3" for="inlineFormCustomSelect">Preu
-                        Defecte</label>
-                    <input type="text" class="form-control col-xl-4 col-md-4 col-sm-3" id="preuDefecte">
 
+                <div class="row" style="margin-top: 2%;">
+                    <div class="col-md-5">
+                        <label class="control-label" for="preuDefecte">Preu
+                            Defecte</label>
+                        <input type="text" class="form-control" id="preuDefecte">
+                    </div>
                 </div>
 
 
-            </div>
+                <br/>
+                <div class="row">
+                    <div class="ml-auto">
+                        <div class="col ml-auto">
 
-            <br/>
-            <div class="d-flex">
-                <button class="btn col-md-2 ml-auto" id="continuar4">Continuar</button>
+                            <button type="submit" class="btn btn-primary " id="continuar4">Insertar</button>
+
+                            <button class="btn btn-outline-primary" id="continuar5">Afegir imatges</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
         </div>
+
         <div class="tab-pane fade" id="imatges" role="tabpanel" aria-labelledby="imatges-tab">
             <div class="container">
                 <form method="post" id="myForm" action="https://api.mallorcarustic.me/casa/crear-imatges"
                       enctype="multipart/form-data">
-                
+
                     <div class="row" style="margin-top: 2%;">
                         <div class="col-md-6">
                             <div class="custom-file">
@@ -322,7 +335,7 @@
                         </div>
                     </div>
                     <div class="d-flex">
-                        <button type="submit" class="btn col-md-2 ml-auto" id="insertar">Insertar</button>
+                        <button type="submit" class="btn btn-primary col-lg-2 col-md-3 ml-auto" id="insertar">Insertar</button>
                     </div>
                 </form>
             </div>
@@ -397,7 +410,7 @@
             $("#myTab li:eq(3) a").tab("show");
         });
         $("#continuar4").click(function () {
-            $("#myTab li:eq(4) a").tab("show");
+
 
             var nom1 = $("#nomCasa").val();
             var nom2 = $("#nomCasaAngles").val();
@@ -405,6 +418,7 @@
             var desc2 = $("#descripcioAngles").val();
             var hab = $("#hab").val();
             var banys = $("#banys").val();
+
 
             var caract = [];
 
@@ -420,14 +434,47 @@
 
             var preu = $("#preuDefecte").val();
 
-            var arrayC = JSON.stringify(caract);
+            $(".errorStyle").remove();
+
+            if (nom1 == "" || nom2 == "" || desc1 == "" || desc2 == "" || x == "" || y == "" || pob == "" || preu == "") {
+                $("#myTab li:eq(0) a").tab("show");
+                if (nom1 == "") {
+                    $("#nomCasa").after("<p class='errorStyle col-10'> <i class='fas fa-exclamation-triangle'> </i> Aquest camp és obligatori. </p>");
+                }
+                if (nom2 == "") {
+                    $("#nomCasaAngles").after("<p class='errorStyle col-10'> <i class='fas fa-exclamation-triangle'> </i> Aquest camp és obligatori. </p>");
+                }
+                if (desc1 == "") {
+                    $("#descripcio").after("<p class='errorStyle col-10'> <i class='fas fa-exclamation-triangle'> </i> Aquest camp és obligatori. </p>");
+                }
+                if (desc2 == "") {
+                    $("#descripcioAngles").after("<p class='errorStyle col-10'> <i class='fas fa-exclamation-triangle'> </i> Aquest camp és obligatori. </p>");
+                }
+                if (x == "") {
+                    $("#x").after("<p class='errorStyle col'> <i class='fas fa-exclamation-triangle'> </i> Aquest camp és obligatori. </p>");
+                }
+                if (y == "") {
+                    $("#y").after("<p class='errorStyle col'> <i class='fas fa-exclamation-triangle'> </i> Aquest camp és obligatori. </p>");
+                }
+                if (pob == "") {
+                    $("#pob").after("<p class='errorStyle col'> <i class='fas fa-exclamation-triangle'> </i> Aquest camp és obligatori. </p>");
+                }
+                if (preu == "") {
+                    $("#preuDefecte").after("<p class='errorStyle col'> <i class='fas fa-exclamation-triangle'> </i> Aquest camp és obligatori. </p>");
+                }
+            } else {
+
+                var arrayC = JSON.stringify(caract);
 
 
-            var xhttp = new XMLHttpRequest();
+                var xhttp = new XMLHttpRequest();
 
-            xhttp.open("POST", "https://api.mallorcarustic.me/casa/crear", true);
-            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xhttp.send("pob=" + pob + "&banys=" + banys + "&hab=" + hab + "&x=" + x + "&y=" + y + "&preu=" + preu + "&nom1=" + nom1 + "&nom2=" + nom2 + "&desc1=" + desc1 + "&desc2=" + desc2 + "&caract=" + arrayC);
+                xhttp.open("POST", "https://api.mallorcarustic.me/casa/crear", true);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhttp.send("pob=" + pob + "&banys=" + banys + "&hab=" + hab + "&x=" + x + "&y=" + y + "&preu=" + preu + "&nom1=" + nom1 + "&nom2=" + nom2 + "&desc1=" + desc1 + "&desc2=" + desc2 + "&caract=" + arrayC);
+
+
+            }
 
 
         });
@@ -452,7 +499,6 @@
                 alert(data);
                 location.href = "/cases";
             });
-
 
 
         });

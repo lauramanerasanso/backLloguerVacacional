@@ -11,9 +11,9 @@ $idCasa = Router::$uri_values[0];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Form Editar</title>
+    <link rel="stylesheet" href="../../style/Bootstrap/dist/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css2?family=Bungee" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -79,7 +79,7 @@ $idCasa = Router::$uri_values[0];
 
                         <div class="row" style="margin-top: 2%">
 
-                            <div class="col-4 offset-3">
+                            <div class="col-lg-4 col-md-8 offset-lg-3">
                                 <div class="custom-file">
 
                                     <input type="file" class="custom-file-input" data-target="file-uploader" id="file"
@@ -87,15 +87,15 @@ $idCasa = Router::$uri_values[0];
                                     <label class="custom-file-label" for="customFile">Imatge principal</label>
                                 </div>
                             </div>
-                            <div class="col-lg-2">
-                                <a class="btn btn-outline" id="img_prin">Modificar</a>
+                            <div class="col-lg-2 col-md-4">
+                                <a class="btn btn-outline-primary" id="img_prin">Modificar</a>
                             </div>
                         </div>
 
 
                         <br/>
                         <div class="row">
-                            <div class=" col-md-6 offset-3">
+                            <div class=" col-lg-6 offset-lg-3">
                                 <img id="f1" alt="foto_principal" class="img-fluid">
                             </div>
 
@@ -104,7 +104,7 @@ $idCasa = Router::$uri_values[0];
 
                         <br/>
                         <div class="d-flex">
-                            <a class="btn col-md-2 ml-auto" id="continuar">Continuar</a>
+                            <a class="btn btn-primary col-lg-2 col-md-3 ml-auto" id="continuar">Continuar</a>
                         </div>
                     </form>
                 </div>
@@ -115,20 +115,20 @@ $idCasa = Router::$uri_values[0];
                           enctype="multipart/form-data">
 
                         <div class="row" style="margin-top: 2%">
-                            <div class="col-4 offset-3">
+                            <div class="col-lg-4 col-md-8 offset-lg-3">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" data-target="file-uploader" id="f2"
                                            name="f2">
                                     <label class="custom-file-label" for="customFile">Imatge 2</label>
                                 </div>
                             </div>
-                            <div class="col-2">
-                                <a class="btn btn-outline" id="img2">Modificar</a>
+                            <div class="col-lg-2 col-md-4">
+                                <a class="btn btn-outline-primary" id="img2">Modificar</a>
                             </div>
                         </div>
                         <br/>
                         <div class="row">
-                            <div class="col-md-6 offset-3">
+                            <div class="col-lg-6 offset-lg-3">
                                 <img id="foto2" alt="foto_2" class="img-fluid">
                             </div>
 
@@ -136,7 +136,7 @@ $idCasa = Router::$uri_values[0];
 
                         <br/>
                         <div class="d-flex">
-                            <a class="btn col-md-2 ml-auto" id="continuar2">Continuar</a>
+                            <a class="btn btn-primary col-lg-2 col-md-3 ml-auto" id="continuar2">Continuar</a>
                         </div>
                     </form>
 
@@ -146,21 +146,21 @@ $idCasa = Router::$uri_values[0];
                           enctype="multipart/form-data">
 
                         <div class="row" style="margin-top: 2%">
-                            <div class="col-4 offset-3">
+                            <div class="col-lg-4 col-md-8 offset-lg-3">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" data-target="file-uploader" id="f3"
                                            name="f3">
                                     <label class="custom-file-label" for="customFile">Imatge 3</label>
                                 </div>
                             </div>
-                            <div class="col-2">
-                                <a type="button" class="btn btn-outline" id="img3">Modificar</a>
+                            <div class="col-lg-2 col-md-4">
+                                <a type="button" class="btn btn-outline-primary" id="img3">Modificar</a>
                             </div>
 
                         </div>
                         <br/>
                         <div class="row">
-                            <div class="col-md-6 offset-3">
+                            <div class="col-lg-6 offset-lg-3">
                                 <img id="foto3" alt="foto_3" class="img-fluid">
                             </div>
 
@@ -168,7 +168,7 @@ $idCasa = Router::$uri_values[0];
 
                         <br/>
                         <div class="d-flex">
-                            <a class="btn col-md-2 ml-auto" id="continuar3">Continuar</a>
+                            <a class="btn btn-primary col-lg-2 col-md-3 ml-auto" id="continuar3">Continuar</a>
                         </div>
                     </form>
 
@@ -179,20 +179,20 @@ $idCasa = Router::$uri_values[0];
 
 
                         <div class="row" style="margin-top: 2%">
-                            <div class="col-md-4 offset-3">
+                            <div class="col-lg-4 col-md-8 offset-lg-3">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" data-target="file-uploader" id="f4"
                                            name="f4">
                                     <label class="custom-file-label" for="customFile">Imatge 4</label>
                                 </div>
                             </div>
-                            <div class="col-2">
-                                <a type="button" class="btn btn-outline" id="img4">Modificar</a>
+                            <div class="col-lg-2 col-md-4">
+                                <a type="button" class="btn btn-outline-primary" id="img4">Modificar</a>
                             </div>
                         </div>
                         <br/>
                         <div class="row">
-                            <div class="col-md-6 offset-3">
+                            <div class="col-lg-6 offset-lg-3">
                                 <img id="foto4" alt="foto_4" class="img-fluid">
                             </div>
 
@@ -200,7 +200,7 @@ $idCasa = Router::$uri_values[0];
 
                         <br/>
                         <div class="d-flex">
-                            <a class="btn col-md-2 ml-auto" id="continuar4">Continuar</a>
+                            <a class="btn btn-primary col-lg-2 col-md-3 ml-auto" id="continuar4">Continuar</a>
                         </div>
                     </form>
                 </div>
@@ -209,20 +209,20 @@ $idCasa = Router::$uri_values[0];
                     <form method="post" id="myForm" action="https://api.mallorcarustic.me/casa/editar-imatges"
                           enctype="multipart/form-data">
                         <div class="row" style="margin-top: 2%">
-                            <div class="col-md-4 offset-3">
+                            <div class="col-lg-4 col-md-8 offset-lg-3">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" data-target="file-uploader" id="f5"
                                            name="f5">
                                     <label class="custom-file-label" for="customFile">Imatge 5</label>
                                 </div>
                             </div>
-                            <div class="col-2">
-                                <a type="button" class="btn btn-outline" id="img5">Modificar</a>
+                            <div class="col-lg-2 col-md-4">
+                                <a type="button" class="btn btn-outline-primary" id="img5">Modificar</a>
                             </div>
                         </div>
                         <br/>
                         <div class="row">
-                            <div class="col-md-6 offset-3">
+                            <div class="col-lg-6 offset-lg-3">
                                 <img id="foto5" alt="foto_5" class="img-fluid">
                             </div>
 
@@ -230,7 +230,7 @@ $idCasa = Router::$uri_values[0];
 
                         <br/>
                         <div class="d-flex">
-                            <a href="../../cases/gestionar/<?= $idCasa ?>" class="btn col-md-2 ml-auto" id="continuar5">Sortir</a>
+                            <a href="../../cases/gestionar/<?= $idCasa ?>" class="btn btn-primary col-lg-2 col-md-3 ml-auto" id="continuar5">Sortir</a>
                         </div>
                     </form>
                 </div>

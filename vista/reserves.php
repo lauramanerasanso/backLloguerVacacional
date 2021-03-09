@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- css -->
+    <link rel="stylesheet" href="../style/Bootstrap/dist/css/bootstrap.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css"/>
+
+
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>
 
@@ -64,12 +66,12 @@ include('header.php');
 
     <div style="background-color:white;padding:4% 8% 8% 8%;">
         <div class="row">
-            <div class="col-11">
+            <div class="col-10">
                 <h2 class="titol" style="margin-bottom: 5%"> Reserves</h2>
             </div>
-            <div class="col-1">
+            <div class="col-2">
 
-                <a href="/reserves/grafics" class="btn ml-auto">Gràfics</a>
+                <a href="/reserves/grafics" class="btn btn-outline-primary ml-auto">Veure gràfics</a>
             </div>
         </div>
         <div class="row">
@@ -96,12 +98,12 @@ include('header.php');
             <div class="col-lg-2 col-md-4">
                 <input type="text" name="any" id="any" class="form-control" placeholder="Tria un any">
             </div>
-            <div class="col-lg-2 col-md-2">
-                <button id="filtrar" class="btn"> Filtrar</button>
+            <div class="col-lg-1 col-md-2">
+                <button id="filtrar" class="btn btn-primary"> Filtrar</button>
             </div>
 
             <div class="col-lg-2 col-md-2">
-                <button id="borrar" class="btn"> Borrar Filtres</button>
+                <button id="borrar" class="btn btn-outline-primary"> Borrar Filtres</button>
             </div>
         </div>
 
@@ -138,7 +140,7 @@ include('header.php');
             '<tr>' +
             '<td><b>Nom complet:</b></td>' +
             '<td>' + d.nomUsuari + ' ' + d.llinatge1 + ' ' + d.llinatge2 + '</td>' +
-            '<td><b>Poblacio:</b></td>' +
+            '<td><b>Població:</b></td>' +
             '<td>' + d.nomPoblacio + '</td>' +
             '<td><b>Data reserva:</b></td>' +
             '<td>' + d.data_reserva + '</td>' +
@@ -146,13 +148,9 @@ include('header.php');
             '<tr>' +
             '<td><b>DNI:</b></td>' +
             '<td>' + d.DNI + '</td>' +
-            '<td><b>Numero targeta:</b></td>' +
-            '<td>' + d.numTargeta + '</td>' +
-            '</tr>' +
-            '<tr>' +
-            '<td><b>Telefon:</b></td>' +
+            '<td><b>Telèfon:</b></td>' +
             '<td>' + d.telefon + '</td>' +
-            '<td><b>email:</b<s></td>' +
+            '<td><b>E-mail:</b></td>' +
             '<td>' + d.email + '</td>' +
             '</tr>' +
             '</table>';
@@ -196,11 +194,11 @@ include('header.php');
                     }
                 },
                 buttons: [
-                    {"extend": 'copy', "className": 'btn', "text": '<i class="fas fa-copy"></i>'},
-                    {"extend": 'pdf', "className": 'btn', "text": '<i class="fas fa-file-pdf"></i>'},
-                    {"extend": 'excel', "className": 'btn', "text": '<i class="fas fa-file-excel"></i>'},
-                    {"extend": 'csv', "className": 'btn', "text": '<i class="fas fa-file-csv"></i>'},
-                    {"extend": 'print', "className": 'btn', "text": '<i class="fas fa-print"></i>'}
+                    {"extend": 'copy', "className": 'btn btn-primary', "text": '<i class="fas fa-copy"></i>'},
+                    {"extend": 'pdf', "className": 'btn btn-primary', "text": '<i class="fas fa-file-pdf"></i>'},
+                    {"extend": 'excel', "className": 'btn btn-primary', "text": '<i class="fas fa-file-excel"></i>'},
+                    {"extend": 'csv', "className": 'btn btn-primary', "text": '<i class="fas fa-file-csv"></i>'},
+                    {"extend": 'print', "className": 'btn btn-primary', "text": '<i class="fas fa-print"></i>'}
 
                 ]
 
@@ -292,11 +290,11 @@ include('header.php');
                             }
                         },
                         buttons: [
-                            {"extend": 'copy', "className": 'btn', "text": '<i class="fas fa-copy"></i>'},
-                            {"extend": 'pdf', "className": 'btn', "text": '<i class="fas fa-file-pdf"></i>'},
-                            {"extend": 'excel', "className": 'btn', "text": '<i class="fas fa-file-excel"></i>'},
-                            {"extend": 'csv', "className": 'btn', "text": '<i class="fas fa-file-csv"></i>'},
-                            {"extend": 'print', "className": 'btn', "text": '<i class="fas fa-print"></i>'}
+                            {"extend": 'copy', "className": 'btn btn-primary', "text": '<i class="fas fa-copy"></i>'},
+                            {"extend": 'pdf', "className": 'btn btn-primary', "text": '<i class="fas fa-file-pdf"></i>'},
+                            {"extend": 'excel', "className": 'btn btn-primary', "text": '<i class="fas fa-file-excel"></i>'},
+                            {"extend": 'csv', "className": 'btn btn-primary', "text": '<i class="fas fa-file-csv"></i>'},
+                            {"extend": 'print', "className": 'btn btn-primary', "text": '<i class="fas fa-print"></i>'}
 
                         ]
 
@@ -348,11 +346,11 @@ include('header.php');
                             }
                         },
                         buttons: [
-                            {"extend": 'copy', "className": 'btn', "text": '<i class="fas fa-copy"></i>'},
-                            {"extend": 'pdf', "className": 'btn', "text": '<i class="fas fa-file-pdf"></i>'},
-                            {"extend": 'excel', "className": 'btn', "text": '<i class="fas fa-file-excel"></i>'},
-                            {"extend": 'csv', "className": 'btn', "text": '<i class="fas fa-file-csv"></i>'},
-                            {"extend": 'print', "className": 'btn', "text": '<i class="fas fa-print"></i>'}
+                            {"extend": 'copy', "className": 'btn btn-primary', "text": '<i class="fas fa-copy"></i>'},
+                            {"extend": 'pdf', "className": 'btn btn-primary', "text": '<i class="fas fa-file-pdf"></i>'},
+                            {"extend": 'excel', "className": 'btn btn-primary', "text": '<i class="fas fa-file-excel"></i>'},
+                            {"extend": 'csv', "className": 'btn btn-primary', "text": '<i class="fas fa-file-csv"></i>'},
+                            {"extend": 'print', "className": 'btn btn-primary', "text": '<i class="fas fa-print"></i>'}
 
                         ]
 
@@ -401,11 +399,11 @@ include('header.php');
                             }
                         },
                         buttons: [
-                            {"extend": 'copy', "className": 'btn', "text": '<i class="fas fa-copy"></i>'},
-                            {"extend": 'pdf', "className": 'btn', "text": '<i class="fas fa-file-pdf"></i>'},
-                            {"extend": 'excel', "className": 'btn', "text": '<i class="fas fa-file-excel"></i>'},
-                            {"extend": 'csv', "className": 'btn', "text": '<i class="fas fa-file-csv"></i>'},
-                            {"extend": 'print', "className": 'btn', "text": '<i class="fas fa-print"></i>'}
+                            {"extend": 'copy', "className": 'btn btn-primary', "text": '<i class="fas fa-copy"></i>'},
+                            {"extend": 'pdf', "className": 'btn btn-primary', "text": '<i class="fas fa-file-pdf"></i>'},
+                            {"extend": 'excel', "className": 'btn btn-primary', "text": '<i class="fas fa-file-excel"></i>'},
+                            {"extend": 'csv', "className": 'btn btn-primary', "text": '<i class="fas fa-file-csv"></i>'},
+                            {"extend": 'print', "className": 'btn btn-primary', "text": '<i class="fas fa-print"></i>'}
 
                         ]
 
@@ -455,11 +453,11 @@ include('header.php');
                             }
                         },
                         buttons: [
-                            {"extend": 'copy', "className": 'btn', "text": '<i class="fas fa-copy"></i>'},
-                            {"extend": 'pdf', "className": 'btn', "text": '<i class="fas fa-file-pdf"></i>'},
-                            {"extend": 'excel', "className": 'btn', "text": '<i class="fas fa-file-excel"></i>'},
-                            {"extend": 'csv', "className": 'btn', "text": '<i class="fas fa-file-csv"></i>'},
-                            {"extend": 'print', "className": 'btn', "text": '<i class="fas fa-print"></i>'}
+                            {"extend": 'copy', "className": 'btn btn-primary', "text": '<i class="fas fa-copy"></i>'},
+                            {"extend": 'pdf', "className": 'btn btn-primary', "text": '<i class="fas fa-file-pdf"></i>'},
+                            {"extend": 'excel', "className": 'btn btn-primary', "text": '<i class="fas fa-file-excel"></i>'},
+                            {"extend": 'csv', "className": 'btn btn-primary', "text": '<i class="fas fa-file-csv"></i>'},
+                            {"extend": 'print', "className": 'btn btn-primary', "text": '<i class="fas fa-print"></i>'}
 
                         ]
 
@@ -508,11 +506,11 @@ include('header.php');
                             }
                         },
                         buttons: [
-                            {"extend": 'copy', "className": 'btn', "text": '<i class="fas fa-copy"></i>'},
-                            {"extend": 'pdf', "className": 'btn', "text": '<i class="fas fa-file-pdf"></i>'},
-                            {"extend": 'excel', "className": 'btn', "text": '<i class="fas fa-file-excel"></i>'},
-                            {"extend": 'csv', "className": 'btn', "text": '<i class="fas fa-file-csv"></i>'},
-                            {"extend": 'print', "className": 'btn', "text": '<i class="fas fa-print"></i>'}
+                            {"extend": 'copy', "className": 'btn btn-primary', "text": '<i class="fas fa-copy"></i>'},
+                            {"extend": 'pdf', "className": 'btn btn-primary', "text": '<i class="fas fa-file-pdf"></i>'},
+                            {"extend": 'excel', "className": 'btn btn-primary', "text": '<i class="fas fa-file-excel"></i>'},
+                            {"extend": 'csv', "className": 'btn btn-primary', "text": '<i class="fas fa-file-csv"></i>'},
+                            {"extend": 'print', "className": 'btn btn-primary', "text": '<i class="fas fa-print"></i>'}
 
                         ]
 
@@ -561,11 +559,11 @@ include('header.php');
                             }
                         },
                         buttons: [
-                            {"extend": 'copy', "className": 'btn', "text": '<i class="fas fa-copy"></i>'},
-                            {"extend": 'pdf', "className": 'btn', "text": '<i class="fas fa-file-pdf"></i>'},
-                            {"extend": 'excel', "className": 'btn', "text": '<i class="fas fa-file-excel"></i>'},
-                            {"extend": 'csv', "className": 'btn', "text": '<i class="fas fa-file-csv"></i>'},
-                            {"extend": 'print', "className": 'btn', "text": '<i class="fas fa-print"></i>'}
+                            {"extend": 'copy', "className": 'btn btn-primary', "text": '<i class="fas fa-copy"></i>'},
+                            {"extend": 'pdf', "className": 'btn btn-primary', "text": '<i class="fas fa-file-pdf"></i>'},
+                            {"extend": 'excel', "className": 'btn btn-primary', "text": '<i class="fas fa-file-excel"></i>'},
+                            {"extend": 'csv', "className": 'btn btn-primary', "text": '<i class="fas fa-file-csv"></i>'},
+                            {"extend": 'print', "className": 'btn btn-primary', "text": '<i class="fas fa-print"></i>'}
 
                         ]
 

@@ -9,12 +9,12 @@ $idCasa =  Router::$uri_values[0];
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../../style/Bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
 
     <link rel="stylesheet" href="/style/css/_general.css"/>
@@ -48,7 +48,7 @@ include('header.php');
 
         <div class="col-md-9">
 
-        <button type="button" class="btn" id="btnModalAfegir"> <i class="fas fa-plus"></i>  Afegir una nova tarifa </button>
+        <button type="button" class="btn btn-primary" id="btnModalAfegir"> <i class="fas fa-plus"></i>  Afegir una nova tarifa </button>
 
         <div class="modal fade" id="modalAfegir">
 
@@ -57,7 +57,7 @@ include('header.php');
                 <div class="modal-content">
 
                     <div class="modal-header">
-                        <h4 class="modal-title">Afegir tarifa</h4>
+                        <h4 class="modal-title titol">Afegir tarifa</h4>
                         <button type="button" class="close" data-dismiss="modal">×</button>
                     </div>
                     <div class="modal-body">
@@ -84,18 +84,18 @@ include('header.php');
                             </div>
                             <br/>
                             <div class="col-2 mx-auto">
-                                <button id="afegeix" type="button" class="btn" data-dismiss="modal">Afegeix</button>
+                                <button id="afegeix" type="button" class="btn btn-primary" data-dismiss="modal">Afegeix</button>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn" data-dismiss="modal">Cancel·la</button>
+                        <button type="button" class="btn  btn-primary" data-dismiss="modal">Cancel·la</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <button type="button" class="btn" id="btnModalAfegirDates"><i class="far fa-calendar-plus"></i> Afegir noves dates a una tarifa</button>
+        <button type="button" class="btn btn-primary" id="btnModalAfegirDates"><i class="far fa-calendar-plus"></i> Afegir noves dates a una tarifa</button>
 
         <div class="modal fade" id="modalAfegirDates">
 
@@ -104,7 +104,7 @@ include('header.php');
                 <div class="modal-content">
 
                     <div class="modal-header">
-                        <h4 class="modal-title">Afegir tarifa</h4>
+                        <h4 class="modal-title titol">Afegir tarifa</h4>
                         <button type="button" class="close" data-dismiss="modal">×</button>
                     </div>
                     <div class="modal-body">
@@ -129,14 +129,14 @@ include('header.php');
                             </div>
                             <br/>
                             <div class="col-2 mx-auto">
-                                <button id="aplica" type="button" class="btn" data-dismiss="modal">Aplica</button>
+                                <button id="aplica" type="button" class="btn btn-primary" data-dismiss="modal">Aplicar</button>
                             </div>
 
 
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn" data-dismiss="modal">Cancel·la</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel·lar</button>
                     </div>
                 </div>
             </div>
@@ -154,7 +154,7 @@ include('header.php');
                 <div class="modal-content">
 
                     <div class="modal-header">
-                        <h4 class="modal-title">Edita la tarifa</h4>
+                        <h4 class="modal-title titol">Edita la tarifa</h4>
                         <button type="button" class="close" data-dismiss="modal">×</button>
                     </div>
                     <div class="modal-body">
@@ -187,8 +187,8 @@ include('header.php');
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn" data-dismiss="modal">Cancel·la</button>
-                        <button id="editaTarifa" type="button" class="btn" data-dismiss="modal">Edita</button>
+                        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel·lar</button>
+                        <button id="editaTarifa" type="button" class="btn btn-primary" data-dismiss="modal">Editar</button>
                     </div>
                 </div>
             </div>
@@ -211,8 +211,8 @@ include('header.php');
                         <input type="date" id="delDataT" name="delDataT" hidden>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn" data-dismiss="modal">Cancel·la</button>
-                        <button type="button" class="btn" id="eliminaTarifa" data-dismiss="modal" >Elimina</button>
+                        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel·lar</button>
+                        <button type="button" class="btn btn-primary" id="eliminaTarifa" data-dismiss="modal" >Eliminar</button>
                     </div>
                 </div>
             </div>
@@ -222,7 +222,7 @@ include('header.php');
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Error</h5>
+                        <h5 class="modal-title titol">Error</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -231,7 +231,7 @@ include('header.php');
                         <p>Les dates introduïdes ja tenen una tarifa aplicada, fes les modificacions necessàries o tria unes altres dates.</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Tancar</button>
                     </div>
                 </div>
             </div>
@@ -337,7 +337,7 @@ include('header.php');
                         var editarIcon = $("<i/>");
                         editarIcon.addClass("far fa-edit");
 
-                        var botoEditar = $("<button/>",{ class: 'btn btnEditar', id: t, click: function (){
+                        var botoEditar = $("<button/>",{ class: 'btn btn-primary btnEditar', id: t, click: function (){
                                 var index = $(this).attr('id');
                                 var json = window.cache.data[index];
                                 editarTarifa(json.nom_tarifa, json.preu_tarifa, json.data_inici, json.data_fi);
@@ -352,7 +352,7 @@ include('header.php');
                         var eliminarIcon = $("<i/>");
                         eliminarIcon.addClass("far fa-trash-alt");
 
-                        var botoEliminar = $("<button/>", { class: 'btn btnEliminar', id: t, click: function (){
+                        var botoEliminar = $("<button/>", { class: 'btn btn-primary btnEliminar', id: t, click: function (){
                                 var index = $(this).attr('id');
                                 var json = window.cache.data[index];
                                 eliminarTarifa(json.nom_tarifa, json.preu_tarifa, json.data_inici);

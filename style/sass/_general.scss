@@ -89,17 +89,23 @@ fieldset {
 }
 
 .auth {
-  margin-top: 200px;
+  width: 75%;
+  height: 100%;
+  margin-top: 100px;
 
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: $black;
-  border-radius: 2px;
-  color: $white;
-  font-family: "Bungee", cursive;
+  background-color:white;
+  padding:5%;
+  box-shadow:  0 1px 1px rgba(0, 0, 0, 0.1),
+  0 2px 40px rgba(0, 0, 0, 0.1),
+  0 4px 13px rgba(0, 0, 0, 0.1),
+  0 8px 38px rgba(0, 0, 0, 0.1),
+  0 16px 38px rgba(0, 0, 0, 0.1);;
+  margin-bottom: 100px;
 
-  h1 {
+  h3{
     text-align: center;
+    margin-bottom: 35px;
+    font-family: "Bungee", cursive;
   }
 
 }
@@ -108,6 +114,8 @@ fieldset {
   font-family: "Bungee", cursive;
   margin-top: 2%;
 }
+
+
 
 .list-group{
   font-family: "Noto Sans JP", sans-serif;
@@ -126,3 +134,20 @@ fieldset {
     border-color: $color_principal;
   }
 }
+
+.errorStyle {
+  width: 100%;
+  
+  background: rgba(255, 0, 0, 0.05);
+  color: #f9314b;
+  font-size: 16px;
+  border: 1px solid #f9314b;
+  border-radius: 5px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-family: 'Noto Sans JP';
+  margin-top: 15px;
+ 
+}
+

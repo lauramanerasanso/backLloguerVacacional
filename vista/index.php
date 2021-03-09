@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                             <div class="d-flex">
-                                <button type="submit" class="btn col-md-3 ml-auto">Entra</button>
+                                <button type="submit" class="btn btn-primary col-md-3 ml-auto">Entrar</button>
 
                             </div>
                         </form>
@@ -61,7 +61,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Error d'Autenticació</h5>
+                <h5 class="modal-title titol">Error d'Autenticació</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -70,7 +70,7 @@
                 <p>L'usuari o la contrasenya no són correctes.</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Tancar</button>
             </div>
         </div>
     </div>

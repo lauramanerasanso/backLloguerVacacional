@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8"/>
     <title>Gràfics</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../style/Bootstrap/dist/css/bootstrap.css">
+
 
     <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" rel="stylesheet" data-semver="3.0.1"
           data-require="normalize@*"/>
@@ -30,7 +30,6 @@
             crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="/style/css/_general.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
     <style>
 
 
@@ -38,6 +37,11 @@
             stroke-width: 2;
         }
 
+        /*body {
+            background: #fcfcfc;
+            padding: 30px;
+            box-sizing: border-box;
+        }*/
 
 
         h1 {
@@ -125,7 +129,7 @@ include('header.php');
 <div class="container-fluid" id="c">
     <div class="row">
         <div class="col-2">
-            <a href="/reserves" class="btn mr-auto"><i class="fas fa-arrow-left"></i> Torna</a>
+            <a href="/reserves" class="btn btn-primary mr-auto"><i class="fas fa-arrow-left"></i> Torna</a>
         </div>
         <div class="col-9" >
             <h2 class="titol"> Gràfics</h2>
@@ -145,112 +149,6 @@ include('header.php');
 <script data-require="d3@*" data-semver="4.0.0" src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
-
-    var xhttp = new XMLHttpRequest();
-
-    var dataset = [];
-
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            var info = JSON.parse(this.responseText);
-
-            for (i in info) {
-                var n = info[i].traduccioNom;
-                var c = info[i].cont;
-
-                dataset.push({label: n, count: c});
-
-            }
-
-
-            var width = 360;
-            var height = 360;
-            var radius = Math.min(width, height) / 2;
-            var donutWidth = 75;
-            var legendRectSize = 18;                                  // NEW
-            var legendSpacing = 4;                                    // NEW
-
-            var color = d3.scaleOrdinal(d3.schemePastel1);
-
-            var svg = d3.select('#chart')
-                .append('svg')
-                .attr('width', width)
-                .attr('height', height)
-                .append('g')
-                .attr('transform', 'translate(' + (width / 2) +
-                    ',' + (height / 2) + ')');
-
-            var arc = d3.arc()
-                .innerRadius(radius - donutWidth)
-                .outerRadius(radius);
-
-            var pie = d3.pie()
-                .value(function (d) {
-                    return d.count;
-                })
-                .sort(null);
-
-            var arcs = svg.selectAll("g.slice")
-                .data(pie(dataset))
-                .enter()
-                .append("svg:g")
-                .attr("class", "slice");
-
-            var path = svg.selectAll('path')
-                .data(pie(dataset))
-                .enter()
-            arcs.append('path')
-                .attr('d', arc)
-                .attr('fill', function (d, i) {
-                    return color(d.data.label);
-                });
-
-            arcs.append("svg:text")
-                .attr("transform", function (d) {
-                    d.innerRadius = 0;
-                    d.outerRadius = radius;
-                    return "translate(" + arc.centroid(d) + ")";
-                })
-                .attr("text-anchor", "middle")
-                .text(function (d, i) {
-                    return dataset[i].count;
-                });
-
-
-            var legend = svg.selectAll('.legend')
-                .data(color.domain())
-                .enter()
-                .append('g')
-                .attr('class', 'legend')
-                .attr('transform', function (d, i) {
-                    var height = legendRectSize + legendSpacing;
-                    var offset = height * color.domain().length / 2;
-                    var horz = -2 * legendRectSize;
-                    var vert = i * height - offset;
-                    return 'translate(' + horz + ',' + vert + ')';
-                });
-
-            legend.append('rect')
-                .attr('width', legendRectSize)
-                .attr('height', legendRectSize)
-                .style('fill', color)
-                .style('stroke', color);
-
-            legend.append('text')
-                .attr('x', legendRectSize + legendSpacing)
-                .attr('y', legendRectSize - legendSpacing)
-                .text(function (d) {
-                    return d;
-                });
-
-        }
-
-    };
-
-
-    xhttp.open("POST", "https://api.mallorcarustic.me/reserves/grafic-pie", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send();
 
     window.cache = {
         mesos: ["Gener", "Febrer", "Març", "Abril", "Maig", "Juny", "Juliol", "Agost", "Setembre", "Octubre", "Novembre", "Desembre"],
@@ -274,14 +172,15 @@ include('header.php');
             if (window.cache.reserves.length < 12) {
                 for (var i = window.cache.reserves.length; i < 12; i++) {
                     window.cache.reserves.push(0);
-                    //console.log(window.cache.reserves);
+                    console.log(window.cache.reserves);
                 }
             }
         }
     });
 
-        // 2. Define chart dimensions + margin
-        var margin = {top: 40, bottom: 80, right: 480, left: 80};
+
+    // 2. Define chart dimensions + margin
+    var margin = {top: 40, bottom: 80, right: 480, left: 80};
     var width = 1280 - margin.left - margin.right;
     var height = 550 - margin.top - margin.bottom;
 
@@ -333,6 +232,113 @@ include('header.php');
     var all_reserves = d3.sum(window.cache.reserves);
     var average_reserves = Math.round((all_reserves / window.cache.mesos.length));
     d3.select('.callout p').text('Mitja: ' + average_reserves + ' reserves / mes');
+
+
+    var xhttp = new XMLHttpRequest();
+
+    var dataset = [];
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var info = JSON.parse(this.responseText);
+
+            for (i in info) {
+                var n = info[i].traduccioNom;
+                var c = info[i].cont;
+
+                dataset.push({label: n, count: c});
+
+            }
+
+
+            var width = 700;
+            var height = 360;
+            var radius = Math.min(width, height) / 2;
+            var donutWidth = 75;
+            var legendRectSize = 18;                                  // NEW
+            var legendSpacing = 4;                                    // NEW
+
+            var color = d3.scaleOrdinal(d3.schemePastel1);
+
+            var svg = d3.select('#chart')
+                .append('svg')
+                .attr('width', width)
+                .attr('height', height)
+                .append('g')
+                .attr('transform', 'translate(250' /*(width / 2)*/ +
+                    ',' + (height / 2) + ')');
+
+            var arc = d3.arc()
+                .innerRadius(radius - donutWidth)
+                .outerRadius(radius);
+
+            var pie = d3.pie()
+                .value(function (d) {
+                    return d.count;
+                })
+                .sort(null);
+
+            var arcs = svg.selectAll("g.slice")
+                .data(pie(dataset))
+                .enter()
+                .append("svg:g")
+                .attr("class", "slice");
+
+            var path = svg.selectAll('path')
+                .data(pie(dataset))
+                .enter()
+            arcs.append('path')
+                .attr('d', arc)
+                .attr('fill', function (d, i) {
+                    return color(d.data.label);
+                });
+
+            arcs.append("svg:text")
+                .attr("transform", function (d) {
+                    d.innerRadius = 0;
+                    d.outerRadius = radius;
+                    return "translate(" + arc.centroid(d) + ")";
+                })
+                .attr("text-anchor", "middle")
+                .text(function (d, i) {
+                    return dataset[i].count;
+                });
+
+
+            var legend = svg.selectAll('.legend')
+                .data(color.domain())
+                .enter()
+                .append('g')
+                .attr('class', 'legend')
+                .attr('transform', function (d, i) {
+                    var height = legendRectSize + legendSpacing;
+                    var offset = height * color.domain().length / 2;
+                    var horz = 250;//-2 * legendRectSize;
+                    var vert = i * height - offset;
+                    return 'translate(' + horz + ',' + vert + ')';
+                });
+
+            legend.append('rect')
+                .attr('width', legendRectSize)
+                .attr('height', legendRectSize)
+                .style('fill', color)
+                .style('stroke', color);
+
+            legend.append('text')
+                .attr('x', legendRectSize + legendSpacing)
+                .attr('y', legendRectSize - legendSpacing)
+                .text(function (d) {
+                    return d;
+                });
+
+        }
+
+    };
+
+
+    xhttp.open("GET", "https://api.mallorcarustic.me/reserves/grafic-pie", true);
+    xhttp.send();
+
 </script>
 </body>
 

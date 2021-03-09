@@ -6,8 +6,7 @@
     <title>Gestió Usuari</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/Bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../style/css/_general.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -26,55 +25,96 @@
 <body>
 <?php include('header.php'); ?>
 <div class="container auth align-self-center">
-    <h1>CANVIA LA CONTRASENYA</h1>
-    <form class="col">
-        <div class="form-row">
-            <div class="form-group col-6">
-                <label for="oldPasswd">CONTRASENYA ACTUAL</label>
-                <input type="password" class="form-control" name="oldPasswd" id="oldPasswd" placeholder="CONTRASENYA" required>
+    <h3>Configuració d'usuari</h3>
+    <form>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 offset-md-2">
+                <div class="form-group">
+
+                    <label for="oldPasswd">Contrasenya actual</label>
+
+
+                    <div class="input-group text-center">
+                        <input type="password" class="form-control" name="oldPasswd" id="oldPasswd" required>
+
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" id="contra1"><i id="ull" class="fas fa-eye"></i></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group col-5">
-                <label for="newPasswd">NOVA CONTRASENYA</label>
-                <input type="password" class="form-control" name="newPasswd" id="newPasswd" placeholder="CONTRASENYA" required>
-            </div>
-            <div class=" text-white col-1 mt-3 pt-3">
-                <i class="fa fa-eye" aria-hidden="true" id="eye"></i>
+            <div class="col-md-4 col-sm-6">
+                <div class="form-group">
+
+                    <label for="newPasswd">Contrasenya nova</label>
+
+                    <div class="input-group text-center">
+
+                        <input type="password" class="form-control" name="newPasswd" id="newPasswd" required>
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" id="contra2"><i id="ull2" class="fas fa-eye"></i></div>
+                        </div>
+
+                    </div>
+
+
+                </div>
             </div>
         </div>
-        <button type="submit" id="bEntrar" class="btn btn-lg col-3 offset-9">ACTUALITZA</button>
+
+
+        <button type="submit" id="bEntrar" class="btn btn-primary col-lg-3 col-md-4 offset-lg-7 offset-md-6">Actualitzar</button>
     </form>
 
 </div>
 <script>
     <?php include "php/control.php";?>
 
-    function show() {
-        var p = document.getElementById('oldPasswd');
-        p.setAttribute('type', 'text');
-        var p1 = document.getElementById('newPasswd');
-        p1.setAttribute('type', 'text');
-    }
-
-    function hide() {
-        var p = document.getElementById('oldPasswd');
-        p.setAttribute('type', 'password');
-        var p1 = document.getElementById('newPasswd');
-        p1.setAttribute('type', 'password');
-    }
-
-    var pwShown = 0;
+    $("#contra1").click(function(){
+        var x = $("#oldPasswd");
 
 
-    document.getElementById("eye").addEventListener("click", function () {
-        if (pwShown == 0) {
-            pwShown = 1;
-            show();
+        if (x.attr('type') === "password") {
+            x.attr('type','text');
+
+
+            $("#ull").attr('class', "fa fa-eye-slash");
+
+
         } else {
-            pwShown = 0;
-            hide();
+
+            x.attr('type','password');
+
+            $("#ull").attr('class', "fas fa-eye");
+
+
         }
-    }, false);
+
+    });
+
+    $("#contra2").click(function(){
+        var x = $("#newPasswd");
+
+
+        if (x.attr('type') === "password") {
+            x.attr('type','text');
+
+
+            $("#ull2").attr('class', "fa fa-eye-slash");
+
+
+        } else {
+
+            x.attr('type','password');
+
+            $("#ull2").attr('class', "fas fa-eye");
+
+
+        }
+
+    });
+
 
 
     $('form').on('submit', function (e) {

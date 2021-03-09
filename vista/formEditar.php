@@ -10,9 +10,9 @@ $idCasa = Router::$uri_values[0];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Form Editar</title>
+    <link rel="stylesheet" href="../../style/Bootstrap/dist/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css2?family=Bungee" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -67,7 +67,7 @@ $idCasa = Router::$uri_values[0];
             <div class="tab-pane fade show active" id="dades" role="tabpanel" aria-labelledby="dades-tab">
                 <div class="container">
                     <div class="form-row" style="margin-top: 2%;">
-                        <div class="form-group col-6">
+                        <div class="form-group col-md-6">
                             <label class="control-label">Nom</label>
 
                             <input type="text" name="nomCasa" id="nomCasa" class="form-control col-10">
@@ -75,7 +75,7 @@ $idCasa = Router::$uri_values[0];
 
                         </div>
 
-                        <div class="form-group col-6">
+                        <div class="form-group col-md-6">
                             <label class="control-label">Name</label>
 
                             <input type="text" name="nomAngles" id="nomCasaAngles" class="form-control col-10">
@@ -85,13 +85,13 @@ $idCasa = Router::$uri_values[0];
                     </div>
                     <br/>
                     <div class="form-row">
-                        <div class="form-group col-6">
+                        <div class="form-group col-md-6">
 
                             <label class="control-label" for="desc1">Descripció</label>
 
                             <textarea class="form-control col-10" id="descripcio" rows="5"></textarea>
                         </div>
-                        <div class="form-group col-6">
+                        <div class="form-group col-md-6">
 
                             <label class="control-label" for="inlineFormCustomSelect">Description</label>
 
@@ -102,7 +102,7 @@ $idCasa = Router::$uri_values[0];
                     </div>
                     <br/>
                     <div class="d-flex">
-                        <button class="btn col-md-2 ml-auto" id="continuar">Continuar</button>
+                        <button class="btn btn-primary col-lg-2 col-md-4 ml-auto" id="continuar">Continuar</button>
                     </div>
                 </div>
 
@@ -237,7 +237,7 @@ $idCasa = Router::$uri_values[0];
                 </div>
                 <br/>
                 <div class="d-flex">
-                    <button class="btn  col-md-2 ml-auto" id="continuar2">Continuar</button>
+                    <button class="btn btn-primary col-lg-2 col-md-4 ml-auto" id="continuar2">Continuar</button>
                 </div>
 
             </div>
@@ -250,22 +250,23 @@ $idCasa = Router::$uri_values[0];
 
                     </div>
                     <div class="row" style="margin-top: 2%;">
-                        <label class="control-label col-lg-2 col-md-2" for="inlineFormCustomSelect">Longitud</label>
-                        <input type="text" class="form-control col-lg-3 col-md-3 col-sm-6" id="x">
+                        <div class="col-md-4">
+                            <label class="control-label" for="x">Longitud</label>
+                            <input type="text" class="form-control" id="x">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="control-label" for="y">Latitud</label>
+                            <input type="text" class="form-control" id="y">
+                        </div>
+                        <div class="col-md-4">
 
-                    </div>
-                   <div class="row">
-                        <label class="control-label col-md-2" for="inlineFormCustomSelect">Latitud</label>
-                        <input type="text" class="form-control col-lg-3 col-md-3  col-sm-6" id="y">
-                    </div>
-                    <div class="row">
-
-                        <label class="control-label col-md-1 col-md-2"" for="inlineFormCustomSelect">Població</label>
-                        <input type="text" class="form-control col-lg-2 col-md-3 col-sm-6" id="pob">
+                            <label class="control-label" for="pob">Població</label>
+                            <input type="text" class="form-control" id="pob">
+                        </div>
                     </div>
                     <br/>
                     <div class="d-flex">
-                        <button class="btn  col-md-2 ml-auto" id="continuar3">Continuar</button>
+                        <button class="btn btn-primary col-lg-2 col-md-4 ml-auto" id="continuar3">Continuar</button>
                     </div>
 
                 </div>
@@ -284,7 +285,7 @@ $idCasa = Router::$uri_values[0];
 
                 <br/>
                 <div class="d-flex">
-                    <button class="btn col-md-2 ml-auto" id="continuar4">Modificar</button>
+                    <button class="btn btn-primary col-lg-2 col-md-4 ml-auto" id="continuar4">Modificar</button>
                 </div>
 
 
