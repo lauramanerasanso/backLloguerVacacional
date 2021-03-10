@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8"/>
-    <title>Gràfics</title>
+    <title>Gràfics - Mallorca Rustic</title>
     <link rel="stylesheet" href="../../style/Bootstrap/dist/css/bootstrap.css">
 
 

@@ -10,7 +10,7 @@ $idCasa = Router::$uri_values[0];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>Form Editar</title>
+    <title>Editar Fotos - Mallorca Rustic</title>
     <link rel="stylesheet" href="../../style/Bootstrap/dist/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 

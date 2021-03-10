@@ -11,7 +11,7 @@ $idCasa = Router::$uri_values[0];
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Form Editar</title>
+    <title>Editar Casa - Mallorca Rustic</title>
     <link rel="stylesheet" href="../../style/Bootstrap/dist/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 

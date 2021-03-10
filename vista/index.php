@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>Autenticació</title>
+    <title>Mallorca Rustic</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../../style/Bootstrap/dist/css/bootstrap.css">
     <link href="https://fonts.googleapis.com/css2?family=Bungee" rel="stylesheet">

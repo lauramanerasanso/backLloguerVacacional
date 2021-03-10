@@ -28,7 +28,7 @@ $idCasa =  Router::$uri_values[0];
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
             integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
             crossorigin="anonymous"></script>
-    <title>Gestió Bloqueig</title>
+    <title>Gestió Bloqueig - Mallorca Rustic</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
 
 </head>
