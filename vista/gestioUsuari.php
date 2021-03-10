@@ -155,6 +155,8 @@
 
                 } else {
 
+                    $(".errorStyle").remove();
+
                     $("#error").after("<p class='errorStyle'><i class='fas fa-exclamation-triangle'> </i> La constrasenya no és correcte. <p>");
 
                 }
