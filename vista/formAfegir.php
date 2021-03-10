@@ -344,6 +344,43 @@
         </div>
 
     </div>
+    <div id="modal" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title titol" id="exampleModalLabel">Casa Afegida</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    La casa s'ha afegit correctament.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Tancar</button>
+
+                </div>
+            </div>
+        </div>
+        <div id="modalError" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title titol" id="exampleModalLabel">Error</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        La casa no s'ha pogut afegir, revisi els camps obligatòris.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Tancar</button>
+
+                    </div>
+                </div>
+            </div>
+    </div>
 </div>
 
 
@@ -469,6 +506,22 @@
 
                 var xhttp = new XMLHttpRequest();
 
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var info = JSON.parse(this.responseText);
+
+                        if(info.success){
+                            $("#modal").modal('show');
+                        }else{
+                            $("#modalError").modal('show');
+                        }
+
+
+                    }
+
+
+                };
+
                 xhttp.open("POST", "https://api.mallorcarustic.me/casa/crear", true);
                 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 xhttp.send("pob=" + pob + "&banys=" + banys + "&hab=" + hab + "&x=" + x + "&y=" + y + "&preu=" + preu + "&nom1=" + nom1 + "&nom2=" + nom2 + "&desc1=" + desc1 + "&desc2=" + desc2 + "&caract=" + arrayC);
@@ -477,6 +530,10 @@
             }
 
 
+        });
+
+        $("#continuar5").click(function () {
+            $("#myTab li:eq(4) a").tab("show");
         });
         $("#insertar").click(function () {
 

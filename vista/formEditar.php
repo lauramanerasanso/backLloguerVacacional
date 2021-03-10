@@ -8,7 +8,9 @@ $idCasa = Router::$uri_values[0];
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Form Editar</title>
     <link rel="stylesheet" href="../../style/Bootstrap/dist/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -31,270 +33,297 @@ $idCasa = Router::$uri_values[0];
 <div class="container" id="c">
 
     <div class="row">
-    <div class="list-group col-md-3">
-        <a href="../../cases/gestionar/<?= $idCasa ?>" class="list-group-item list-group-item-action">Calendari</a>
-        <a href="../../editar/info/<?= $idCasa ?>" class="list-group-item list-group-item-action active" >Editar informació</a>
-        <a href="../../editar/imatges/<?= $idCasa ?>" class="list-group-item list-group-item-action">Modificar
-            imatges</a>
-        <a href="../../gestio/tarifes/<?= $idCasa ?>" class="list-group-item list-group-item-action">Gestionar
-            tarifes</a>
-        <a href="../../gestio/bloqueig/<?= $idCasa ?>" class="list-group-item list-group-item-action">Gestionar
-            bloqueig</a>
-    </div>
-    <div class="col-md-9">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="dades-tab" data-toggle="tab" href="#dades" role="tab"
-                   aria-controls="dades"
-                   aria-selected="true">Dades Generals</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="caract-tab" data-toggle="tab" href="#caract" role="tab" aria-controls="caract"
-                   aria-selected="false">Característiques</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="ubi-tab" data-toggle="tab" href="#ubi" role="tab" aria-controls="ubi"
-                   aria-selected="false">Ubicació</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="tarifa-tab" data-toggle="tab" href="#tarifa" role="tab" aria-controls="tarifa"
-                   aria-selected="false">Tarifes</a>
-            </li>
-
-        </ul>
-        <div class="tab-content" id="myTabContent">
-
-            <div class="tab-pane fade show active" id="dades" role="tabpanel" aria-labelledby="dades-tab">
-                <div class="container">
-                    <div class="form-row" style="margin-top: 2%;">
-                        <div class="form-group col-md-6">
-                            <label class="control-label">Nom</label>
-
-                            <input type="text" name="nomCasa" id="nomCasa" class="form-control col-10">
-
-
-                        </div>
-
-                        <div class="form-group col-md-6">
-                            <label class="control-label">Name</label>
-
-                            <input type="text" name="nomAngles" id="nomCasaAngles" class="form-control col-10">
-
-
-                        </div>
-                    </div>
-                    <br/>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-
-                            <label class="control-label" for="desc1">Descripció</label>
-
-                            <textarea class="form-control col-10" id="descripcio" rows="5"></textarea>
-                        </div>
-                        <div class="form-group col-md-6">
-
-                            <label class="control-label" for="inlineFormCustomSelect">Description</label>
-
-                            <textarea class="form-control col-10" id="descripcioAngles" rows="5"></textarea>
-                        </div>
-
-
-                    </div>
-                    <br/>
-                    <div class="d-flex">
-                        <button class="btn btn-primary col-lg-2 col-md-4 ml-auto" id="continuar">Continuar</button>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-            <div class="tab-pane fade" id="caract" role="tabpanel" aria-labelledby="caract-tab">
-                <div class="container con">
-                    <fieldset style="margin-top: 2%;">
-                        <legend id="leg1">Distribució</legend>
-                        <div class="row">
-
-                            <label class="control-label col-md-2 col-sm-3 offset-md-1" for="inlineFormCustomSelect">Num
-                                Habitacions</label>
-                            <div class="col-xl-2 col-md-2 col-sm-1">
-                                <select class="custom-select" id="hab">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-
-                            </div>
-
-
-                            <label class="control-label col-md-2 col-sm-2 offset-md-2" for="inlineFormCustomSelect">Num
-                                Banys</label>
-                            <div class="col-xl-2 col-md-2 col-sm-1">
-                                <select class="custom-select" id="banys">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-
-                            </div>
-                        </div>
-
-
-                    </fieldset>
-
-                    <fieldset>
-                        <legend id="leg2">Serveis</legend>
-                        <div class="row">
-
-                            <div class="form-group col-md-4 col-sm-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="1" id="piscina">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Piscina
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="2" id="aire">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Aire Acondicionat
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="3" id="calefaccio">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Calefacció
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="4" id="parking">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Aparcament
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="form-group col-md-4 col-sm-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="5" id="tv">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        TV Satèl.lit
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="6" id="wifi">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        WI-FI
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="7" id="caixa">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Caixa fort
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="8" id="bressol">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Bressol
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="form-group col-md-4 col-sm-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="9" id="xemeneia">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Xemeneia
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="10" id="bbq">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Barbacoes
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="11" id="jardi">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Jardí o terrassa
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="12" id="animals">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Admet animals de companyia
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                </div>
-                <br/>
-                <div class="d-flex">
-                    <button class="btn btn-primary col-lg-2 col-md-4 ml-auto" id="continuar2">Continuar</button>
-                </div>
-
-            </div>
-
-            <div class="tab-pane fade" id="ubi" role="tabpanel" aria-labelledby="ubi-tab">
-                <div class="container">
-                    <div class="row">
-
-                        <div id="googleMap" style="width:100%;height:300px;margin:10px;align-content: center"></div>
-
-                    </div>
-                    <div class="row" style="margin-top: 2%;">
-                        <div class="col-md-4">
-                            <label class="control-label" for="x">Longitud</label>
-                            <input type="text" class="form-control" id="x">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="control-label" for="y">Latitud</label>
-                            <input type="text" class="form-control" id="y">
-                        </div>
-                        <div class="col-md-4">
-
-                            <label class="control-label" for="pob">Població</label>
-                            <input type="text" class="form-control" id="pob">
-                        </div>
-                    </div>
-                    <br/>
-                    <div class="d-flex">
-                        <button class="btn btn-primary col-lg-2 col-md-4 ml-auto" id="continuar3">Continuar</button>
-                    </div>
-
-                </div>
-            </div>
-            <div class="tab-pane fade" id="tarifa" role="tabpanel" aria-labelledby="imatges-tab">
-                <div class="container">
-                    <div class="row" style="margin-top: 2%;">
-                        <label class="control-label col-xl-2 col-md-3 col-sm-3" for="inlineFormCustomSelect">Preu
-                            Defecte</label>
-                        <input type="text" class="form-control col-xl-4 col-md-4 col-sm-3" id="preuDefecte">
-
-                    </div>
-
-
-                </div>
-
-                <br/>
-                <div class="d-flex">
-                    <button class="btn btn-primary col-lg-2 col-md-4 ml-auto" id="continuar4">Modificar</button>
-                </div>
-
-
-            </div>
-
-
+        <div class="list-group col-md-3">
+            <a href="../../cases/gestionar/<?= $idCasa ?>" class="list-group-item list-group-item-action">Calendari</a>
+            <a href="../../editar/info/<?= $idCasa ?>" class="list-group-item list-group-item-action active">Editar
+                informació</a>
+            <a href="../../editar/imatges/<?= $idCasa ?>" class="list-group-item list-group-item-action">Modificar
+                imatges</a>
+            <a href="../../gestio/tarifes/<?= $idCasa ?>" class="list-group-item list-group-item-action">Gestionar
+                tarifes</a>
+            <a href="../../gestio/bloqueig/<?= $idCasa ?>" class="list-group-item list-group-item-action">Gestionar
+                bloqueig</a>
         </div>
+        <div class="col-md-9">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="dades-tab" data-toggle="tab" href="#dades" role="tab"
+                       aria-controls="dades"
+                       aria-selected="true">Dades Generals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="caract-tab" data-toggle="tab" href="#caract" role="tab"
+                       aria-controls="caract"
+                       aria-selected="false">Característiques</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="ubi-tab" data-toggle="tab" href="#ubi" role="tab" aria-controls="ubi"
+                       aria-selected="false">Ubicació</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tarifa-tab" data-toggle="tab" href="#tarifa" role="tab"
+                       aria-controls="tarifa"
+                       aria-selected="false">Tarifes</a>
+                </li>
+
+            </ul>
+            <div class="tab-content" id="myTabContent">
+
+                <div class="tab-pane fade show active" id="dades" role="tabpanel" aria-labelledby="dades-tab">
+                    <div class="container">
+                        <div class="form-row" style="margin-top: 2%;">
+                            <div class="form-group col-md-6">
+                                <label class="control-label">Nom</label>
+
+                                <input type="text" name="nomCasa" id="nomCasa" class="form-control col-10">
+
+
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label class="control-label">Name</label>
+
+                                <input type="text" name="nomAngles" id="nomCasaAngles" class="form-control col-10">
+
+
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+
+                                <label class="control-label" for="desc1">Descripció</label>
+
+                                <textarea class="form-control col-10" id="descripcio" rows="5"></textarea>
+                            </div>
+                            <div class="form-group col-md-6">
+
+                                <label class="control-label" for="inlineFormCustomSelect">Description</label>
+
+                                <textarea class="form-control col-10" id="descripcioAngles" rows="5"></textarea>
+                            </div>
+
+
+                        </div>
+                        <br/>
+                        <div class="d-flex">
+                            <button class="btn btn-primary col-lg-2 col-md-4 ml-auto" id="continuar">Continuar</button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="tab-pane fade" id="caract" role="tabpanel" aria-labelledby="caract-tab">
+                    <div class="container con">
+                        <fieldset style="margin-top: 2%;">
+                            <legend id="leg1">Distribució</legend>
+                            <div class="row">
+
+                                <label class="control-label col-md-2 col-sm-3 offset-md-1" for="inlineFormCustomSelect">Num
+                                    Habitacions</label>
+                                <div class="col-xl-2 col-md-2 col-sm-1">
+                                    <select class="custom-select" id="hab">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+
+                                </div>
+
+
+                                <label class="control-label col-md-2 col-sm-2 offset-md-2" for="inlineFormCustomSelect">Num
+                                    Banys</label>
+                                <div class="col-xl-2 col-md-2 col-sm-1">
+                                    <select class="custom-select" id="banys">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+
+                                </div>
+                            </div>
+
+
+                        </fieldset>
+
+                        <fieldset>
+                            <legend id="leg2">Serveis</legend>
+                            <div class="row">
+
+                                <div class="form-group col-md-4 col-sm-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="1" id="piscina">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Piscina
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="2" id="aire">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Aire Acondicionat
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="3" id="calefaccio">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Calefacció
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="4" id="parking">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Aparcament
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-4 col-sm-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="5" id="tv">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            TV Satèl.lit
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="6" id="wifi">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            WI-FI
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="7" id="caixa">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Caixa fort
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="8" id="bressol">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Bressol
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-4 col-sm-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="9" id="xemeneia">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Xemeneia
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="10" id="bbq">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Barbacoes
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="11" id="jardi">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Jardí o terrassa
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="12" id="animals">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Admet animals de companyia
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </div>
+                    <br/>
+                    <div class="d-flex">
+                        <button class="btn btn-primary col-lg-2 col-md-4 ml-auto" id="continuar2">Continuar</button>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane fade" id="ubi" role="tabpanel" aria-labelledby="ubi-tab">
+                    <div class="container">
+                        <div class="row">
+
+                            <div id="googleMap" style="width:100%;height:300px;margin:10px;align-content: center"></div>
+
+                        </div>
+                        <div class="row" style="margin-top: 2%;">
+                            <div class="col-md-4">
+                                <label class="control-label" for="x">Longitud</label>
+                                <input type="text" class="form-control" id="x">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="control-label" for="y">Latitud</label>
+                                <input type="text" class="form-control" id="y">
+                            </div>
+                            <div class="col-md-4">
+
+                                <label class="control-label" for="pob">Població</label>
+                                <input type="text" class="form-control" id="pob">
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="d-flex">
+                            <button class="btn btn-primary col-lg-2 col-md-4 ml-auto" id="continuar3">Continuar</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tarifa" role="tabpanel" aria-labelledby="imatges-tab">
+                    <div class="container">
+                        <div class="row" style="margin-top: 2%;">
+                            <label class="control-label col-xl-2 col-md-3 col-sm-3" for="inlineFormCustomSelect">Preu
+                                Defecte</label>
+                            <input type="text" class="form-control col-xl-4 col-md-4 col-sm-3" id="preuDefecte">
+
+                        </div>
+
+
+                    </div>
+
+                    <br/>
+                    <div class="d-flex">
+                        <button class="btn btn-primary col-lg-2 col-md-4 ml-auto" id="continuar4">Modificar</button>
+                        <div id="m" class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title titol" id="exampleModalLabel">Casa Actualitzada</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        La casa s'ha modificat correctament.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Tancar
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
     </div>
-    </div>
+
+
 </div>
 <script>
 
@@ -360,12 +389,21 @@ $idCasa = Router::$uri_values[0];
 
             var xhttp = new XMLHttpRequest();
 
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var info = JSON.parse(this.responseText);
+                    if (info.success) {
+                        $("#m").modal('show');
+
+                    }
+                }
+            };
+
             xhttp.open("POST", "https://api.mallorcarustic.me/casa/editar", true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhttp.send("idCasa=" + idCasa + "&pob=" + pob + "&banys=" + banys + "&hab=" + hab + "&x=" + x + "&y=" + y + "&preu=" + preu + "&nom1=" + nom1 + "&nom2=" + nom2 + "&desc1=" + desc1 + "&desc2=" + desc2 + "&caract=" + arrayC);
 
 
-            location.href = "../../cases/gestionar/<?=$idCasa?>";
         });
 
 

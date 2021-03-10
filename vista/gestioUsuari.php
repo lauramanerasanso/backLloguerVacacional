@@ -29,7 +29,7 @@
     <form>
         <div class="row">
             <div class="col-md-4 col-sm-6 offset-md-2">
-                <div class="form-group">
+                <div class="form-group" id="error">
 
                     <label for="oldPasswd">Contrasenya actual</label>
 
@@ -66,6 +66,25 @@
 
         <button type="submit" id="bEntrar" class="btn btn-primary col-lg-3 col-md-4 offset-lg-7 offset-md-6">Actualitzar</button>
     </form>
+    <div id="modal" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title titol" id="exampleModalLabel">Constrasenya Modificada</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    La constrasenya s'ha modificat correctament.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Tancar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
 <script>
@@ -129,10 +148,15 @@
                 var info = JSON.parse(this.responseText);
 
                 if (info == "OK") {
-                    location.href = "https://admin.mallorcarustic.me/cases";
+
+                    $(".errorStyle").remove();
+
+                    $("#modal").modal('show');
+
                 } else {
-                    alert("Contrasenya incorrecta");
-                    location.href = "https://admin.mallorcarustic.me";
+
+                    $("#error").after("<p class='errorStyle'><i class='fas fa-exclamation-triangle'> </i> La constrasenya no és correcte. <p>");
+
                 }
 
             }

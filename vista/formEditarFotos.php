@@ -237,6 +237,19 @@ $idCasa = Router::$uri_values[0];
             </div>
         </div>
     </div>
+    <div id="modal" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    No has afegit cap imatge.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Tancar</button>
+
+                </div>
+            </div>
+        </div>
 </div>
 <script>
     <?php include "php/control.php";?>
@@ -316,7 +329,7 @@ $idCasa = Router::$uri_values[0];
                         $("#f1").attr("src", "../" + response + "?" + new Date().getTime());
 
                     } else {
-                        alert('No has penjat cap imatge.');
+                        $("#modal").modal('show');
                     }
                 },
             });
@@ -331,7 +344,7 @@ $idCasa = Router::$uri_values[0];
             formData.append('file', foto);
 
             $.ajax({
-                url: 'https://api.mallorcarustic.me/casa/editar-imatges?idCasa=<?= $idCasa ?>&idImg=2',
+                url: 'https://api.mallorcarustic.me/editar-imatges?idCasa=<?= $idCasa ?>&idImg=2',
                 type: 'POST',
                 data: formData,
                 contentType: false,
@@ -341,7 +354,7 @@ $idCasa = Router::$uri_values[0];
                         $("#foto2").attr("src", "../" + response + "?" + new Date().getTime());
 
                     } else {
-                        alert('No has penjat cap imatge.');
+                        $("#modal").modal('show');
                     }
                 },
             });
@@ -368,7 +381,7 @@ $idCasa = Router::$uri_values[0];
                         $("#foto3").attr("src", "../" + response + "?" + new Date().getTime());
 
                     } else {
-                        alert('No has penjat cap imatge.');
+                        $("#modal").modal('show');
                     }
                 },
             });
@@ -393,7 +406,7 @@ $idCasa = Router::$uri_values[0];
                         $("#foto4").attr("src", "../" + response + "?" + new Date().getTime());
 
                     } else {
-                        alert('No has penjat cap imatge.');
+                        $("#modal").modal('show');
                     }
                 },
             });
@@ -418,7 +431,7 @@ $idCasa = Router::$uri_values[0];
                         $("#foto5").attr("src", "../" + response + "?" + new Date().getTime());
 
                     } else {
-                        alert('No has penjat cap imatge.');
+                        $("#modal").modal('show');
                     }
                 },
             });

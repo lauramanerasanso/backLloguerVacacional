@@ -82,14 +82,13 @@ include('header.php');
                                 <label for="finishaf" class="form-label col-4">Data fi:</label>
                                 <input type="date" id="finishaf" name="finishaf" class="form-control col-8">
                             </div>
-                            <br/>
-                            <div class="col-2 mx-auto">
-                                <button id="afegeix" type="button" class="btn btn-primary" data-dismiss="modal">Afegeix</button>
-                            </div>
+                        
+                            
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn  btn-primary" data-dismiss="modal">Cancel·la</button>
+                        <button type="button" class="btn  btn-outline-primary" data-dismiss="modal">Cancel·lar</button>
+                        <button id="afegeix" type="button" class="btn btn-primary" data-dismiss="modal">Afegir</button>
                     </div>
                 </div>
             </div>
@@ -127,16 +126,14 @@ include('header.php');
                                 <label for="finish" class="form-label col-4">Data fi:</label>
                                 <input type="date" id="finish" name="finish" class="form-control col-8">
                             </div>
-                            <br/>
-                            <div class="col-2 mx-auto">
-                                <button id="aplica" type="button" class="btn btn-primary" data-dismiss="modal">Aplicar</button>
-                            </div>
+                           
 
 
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel·lar</button>
+                        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel·lar</button>
+                        <button id="aplica" type="button" class="btn btn-primary" data-dismiss="modal">Aplicar</button>
                     </div>
                 </div>
             </div>

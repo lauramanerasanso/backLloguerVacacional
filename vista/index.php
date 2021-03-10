@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Autenticació</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../style/Bootstrap/dist/css/bootstrap.css">
     <link href="https://fonts.googleapis.com/css2?family=Bungee" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -46,7 +45,7 @@
                                 </div>
                             </div>
                             <div class="d-flex">
-                                <button type="submit" class="btn btn-primary col-md-3 ml-auto">Entrar</button>
+                                <button type="submit" class="btn btn-primary col-md-3 ml-auto entrar">Entra</button>
 
                             </div>
                         </form>
@@ -61,7 +60,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title titol">Error d'Autenticació</h5>
+                <h5 class="modal-title">Error d'Autenticació</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -100,7 +99,7 @@
                 if (r['success']) {
                     localStorage.setItem('sessio',r['session_id']);
                     console.log(localStorage.getItem('sessio'));
-                    location.href = "https://admin.mallorcarustic.me/cases";
+                    location.href = "https://admin.malllorcarustic.me/cases";
                 }else{
                     $("#error").modal();
                     $("#username").val("");
