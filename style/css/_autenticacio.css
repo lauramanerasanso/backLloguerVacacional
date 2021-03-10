@@ -1,10 +1,11 @@
-.btn {
+.entrar {
   background-color: #967ADC;
   border-color: #967ADC;
   color: #ffffff;
+  font-family: "Bungee", cursive;
 }
 
-.btn:hover {
+.entrar:hover {
   background-color: rgba(150, 122, 220, 0.7);
   border-color: rgba(150, 122, 220, 0.7);
 }
@@ -52,11 +53,11 @@ h1 {
   font-family: "Bungee", cursive;
 }
 
-label {
+.modal-title {
   font-family: "Bungee", cursive;
 }
 
-.btn {
+label {
   font-family: "Bungee", cursive;
 }
 
